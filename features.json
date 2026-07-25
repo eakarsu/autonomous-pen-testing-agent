@@ -1,5 +1,131 @@
 [
   {
+    "name": "About",
+    "canonicalKey": "about",
+    "aliases": [],
+    "kinds": [
+      "navigation"
+    ],
+    "routes": [],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "navigation",
+        "sourceProject": "security_detection",
+        "path": "mobile/mobile/NodeGuardMobile/src/screens/MenuScreen.tsx:84",
+        "route": "",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Access",
+    "canonicalKey": "access",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/access"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:107",
+        "route": "/{case_id}/access",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Ack",
+    "canonicalKey": "ack",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/pages/:id/ack"
+    ],
+    "sourceProjects": [
+      "AICyberSOCCopilot"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AICyberSOCCopilot",
+        "path": "backend/routes/oncall_escalations.js:113",
+        "route": "/pages/:id/ack",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Admin",
+    "canonicalKey": "admin",
+    "aliases": [],
+    "kinds": [
+      "navigation"
+    ],
+    "routes": [],
+    "sourceProjects": [
+      "AICyberSOCCopilot"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "navigation",
+        "sourceProject": "AICyberSOCCopilot",
+        "path": "frontend/src/components/Sidebar.js:99",
+        "route": "",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Agents Page",
+    "canonicalKey": "agent",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/AgentsPage"
+    ],
+    "sourceProjects": [
+      "AIAutonomousPenTestingAgent"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "page",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "frontend/src/pages/AgentsPage.js",
+        "route": "/AgentsPage",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "AI Advanced Analysis",
     "canonicalKey": "advanced ai analysis",
     "aliases": [
@@ -104,7 +230,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:201",
+        "path": "frontend/src/App.tsx:185",
         "route": "/ai-analysis",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -1243,7 +1369,7 @@
   },
   {
     "name": "AI Prioritize Vulns Page",
-    "canonicalKey": "ai prioritize vulns",
+    "canonicalKey": "ai prioritize vuln",
     "aliases": [],
     "kinds": [
       "page"
@@ -1347,7 +1473,7 @@
   },
   {
     "name": "AI Reports Analysis",
-    "canonicalKey": "ai analysis reports",
+    "canonicalKey": "ai analysis report",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -1371,7 +1497,7 @@
   },
   {
     "name": "AI Reports Page",
-    "canonicalKey": "ai reports",
+    "canonicalKey": "ai report",
     "aliases": [],
     "kinds": [
       "page"
@@ -1737,7 +1863,7 @@
   },
   {
     "name": "AI Triage Alerts Page",
-    "canonicalKey": "ai alerts triage",
+    "canonicalKey": "ai alert triage",
     "aliases": [],
     "kinds": [
       "page"
@@ -1858,200 +1984,8 @@
     ]
   },
   {
-    "name": "API Management",
-    "canonicalKey": "api",
-    "aliases": [],
-    "kinds": [
-      "navigation"
-    ],
-    "routes": [],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "security_detection",
-        "path": "mobile/mobile/NodeGuardMobile/src/screens/MenuScreen.tsx:59",
-        "route": "",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "About",
-    "canonicalKey": "about",
-    "aliases": [],
-    "kinds": [
-      "navigation"
-    ],
-    "routes": [],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "security_detection",
-        "path": "mobile/mobile/NodeGuardMobile/src/screens/MenuScreen.tsx:84",
-        "route": "",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Ack",
-    "canonicalKey": "ack",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/pages/:id/ack"
-    ],
-    "sourceProjects": [
-      "AICyberSOCCopilot"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AICyberSOCCopilot",
-        "path": "backend/routes/oncall_escalations.js:113",
-        "route": "/pages/:id/ack",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Action Id",
-    "canonicalKey": "action id",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/approve/{action_id}",
-      "/revert/{action_id}",
-      "/status/{action_id}"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/response.py:117",
-        "route": "/revert/{action_id}",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/response.py:137",
-        "route": "/status/{action_id}",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/response.py:97",
-        "route": "/approve/{action_id}",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Admin",
-    "canonicalKey": "admin",
-    "aliases": [],
-    "kinds": [
-      "navigation"
-    ],
-    "routes": [],
-    "sourceProjects": [
-      "AICyberSOCCopilot"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "AICyberSOCCopilot",
-        "path": "frontend/src/components/Sidebar.js:99",
-        "route": "",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Agents Page",
-    "canonicalKey": "agents",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/AgentsPage"
-    ],
-    "sourceProjects": [
-      "AIAutonomousPenTestingAgent"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIAutonomousPenTestingAgent",
-        "path": "frontend/src/pages/AgentsPage.js",
-        "route": "/AgentsPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Alert Id",
-    "canonicalKey": "alert id",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/status/{alert_id}"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/alerts.py:123",
-        "route": "/status/{alert_id}",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Alert Preferences And Channels",
-    "canonicalKey": "alert and channel preferences",
+    "canonicalKey": "alert and channel preference",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -2069,32 +2003,6 @@
         "sourceProject": "security_detection",
         "path": "mobile/mobile/NodeGuardMobile/src/screens/MenuScreen.tsx:66",
         "route": "",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Alert Severity",
-    "canonicalKey": "alert severity",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/alert-severity"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:204",
-        "route": "/alert-severity",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -2658,6 +2566,30 @@
     ]
   },
   {
+    "name": "API Management",
+    "canonicalKey": "api",
+    "aliases": [],
+    "kinds": [
+      "navigation"
+    ],
+    "routes": [],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "navigation",
+        "sourceProject": "security_detection",
+        "path": "mobile/mobile/NodeGuardMobile/src/screens/MenuScreen.tsx:59",
+        "route": "",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "App",
     "canonicalKey": "app",
     "aliases": [],
@@ -2724,7 +2656,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:170",
+        "path": "frontend/src/App.tsx:154",
         "route": "/*",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -2774,6 +2706,58 @@
         "sourceProject": "security_detection",
         "path": "mobile/mobile/NodeGuardMobile/src/screens/MenuScreen.tsx:85",
         "route": "",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Approve",
+    "canonicalKey": "approve",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/plans/:id/approve"
+    ],
+    "sourceProjects": [
+      "AIAutonomousPenTestingAgent"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "backend/routes/authorizedTesting.js:14",
+        "route": "/plans/:id/approve",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Assess",
+    "canonicalKey": "assess",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/cases/:id/assess"
+    ],
+    "sourceProjects": [
+      "AIOTSecOpsForICS"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:190",
+        "route": "/cases/:id/assess",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -3209,6 +3193,32 @@
         "sourceProject": "AIOTSecOpsForICS",
         "path": "frontend/src/pages/AuditLogPage.js",
         "route": "/AuditLogPage",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Authoritative Form",
+    "canonicalKey": "authoritative form",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/authoritative-form"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:131",
+        "route": "/{case_id}/authoritative-form",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -3785,7 +3795,7 @@
   },
   {
     "name": "C Users User Documents Data Txt",
-    "canonicalKey": "c data documents txt user users",
+    "canonicalKey": "c data document txt user",
     "aliases": [],
     "kinds": [
       "api"
@@ -3811,7 +3821,7 @@
   },
   {
     "name": "C Windows Temp Malware Tmp",
-    "canonicalKey": "c malware temp tmp windows",
+    "canonicalKey": "c malware temp tmp window",
     "aliases": [],
     "kinds": [
       "api"
@@ -3883,6 +3893,80 @@
         "sourceProject": "AIOTSecOpsForICS",
         "path": "backend/routes/changeWindowApprovals.js:84",
         "route": "/calendar",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Case Id",
+    "canonicalKey": "case id",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:99",
+        "route": "/{case_id}",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Cases",
+    "canonicalKey": "case",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/cases"
+    ],
+    "sourceProjects": [
+      "AICyberSOCCopilot",
+      "AIOTSecOpsForICS"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AICyberSOCCopilot",
+        "path": "backend/routes/workflow.js:25",
+        "route": "/cases",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AICyberSOCCopilot",
+        "path": "backend/routes/workflow.js:50",
+        "route": "/cases",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:68",
+        "route": "/cases",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:84",
+        "route": "/cases",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -4686,8 +4770,7 @@
       "AIAutonomousPenTestingAgent",
       "AICyberSOCCopilot",
       "AIDetectcombatmisinformatio",
-      "AIOTSecOpsForICS",
-      "security_detection"
+      "AIOTSecOpsForICS"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -4720,19 +4803,12 @@
         "path": "frontend/src/pages/CodexCustomVizFeature.jsx",
         "route": "/CodexCustomVizFeature",
         "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/CodexCustomVizFeature.tsx",
-        "route": "/CodexCustomVizFeature",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
   },
   {
     "name": "Codex Operations Feature",
-    "canonicalKey": "codex operations",
+    "canonicalKey": "codex operation",
     "aliases": [],
     "kinds": [
       "page"
@@ -4744,8 +4820,7 @@
       "AIAutonomousPenTestingAgent",
       "AICyberSOCCopilot",
       "AIDetectcombatmisinformatio",
-      "AIOTSecOpsForICS",
-      "security_detection"
+      "AIOTSecOpsForICS"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -4778,13 +4853,6 @@
         "path": "frontend/src/pages/CodexOperationsFeature.jsx",
         "route": "/CodexOperationsFeature",
         "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/CodexOperationsFeature.tsx",
-        "route": "/CodexOperationsFeature",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
   },
@@ -4800,8 +4868,7 @@
     ],
     "sourceProjects": [
       "AICyberSOCCopilot",
-      "AIDigitalIdentityVerifiableCredentials",
-      "AIOTSecOpsForICS"
+      "AIDigitalIdentityVerifiableCredentials"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -4810,7 +4877,7 @@
       {
         "kind": "api",
         "sourceProject": "AICyberSOCCopilot",
-        "path": "backend/services/ai.js:46",
+        "path": "backend/services/ai.js:27",
         "route": "/api/v1/chat/completions",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -4818,13 +4885,6 @@
         "kind": "api",
         "sourceProject": "AIDigitalIdentityVerifiableCredentials",
         "path": "server/openrouter.js:21",
-        "route": "/api/v1/chat/completions",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIOTSecOpsForICS",
-        "path": "backend/services/ai.js:65",
         "route": "/api/v1/chat/completions",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -4850,7 +4910,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:192",
+        "path": "frontend/src/App.tsx:176",
         "route": "/compliance",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -5050,7 +5110,7 @@
   },
   {
     "name": "Configure API Endpoints And Keys",
-    "canonicalKey": "and api configure endpoints keys",
+    "canonicalKey": "and api configure endpoint keys",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -5094,6 +5154,39 @@
         "sourceProject": "AIOTSecOpsForICS",
         "path": "backend/routes/changeWindowApprovals.js:65",
         "route": "/conflicts",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Connector Failures",
+    "canonicalKey": "connector failure",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/connector-failures"
+    ],
+    "sourceProjects": [
+      "AIOTSecOpsForICS"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:304",
+        "route": "/connector-failures",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:321",
+        "route": "/connector-failures",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -5244,32 +5337,6 @@
     ]
   },
   {
-    "name": "Correlate Dedupe",
-    "canonicalKey": "correlate dedupe",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/correlate-dedupe"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai_extras.py:100",
-        "route": "/correlate-dedupe",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Correlation",
     "canonicalKey": "correlation",
     "aliases": [],
@@ -5322,7 +5389,7 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/incidents.py:158",
+        "path": "backend/python/api/routes/incidents.py:159",
         "route": "/count",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -5460,16 +5527,13 @@
   },
   {
     "name": "Custom Views",
-    "canonicalKey": "custom view",
-    "aliases": [
-      "Custom Views Page"
-    ],
+    "canonicalKey": "custom",
+    "aliases": [],
     "kinds": [
       "navigation",
       "page"
     ],
     "routes": [
-      "/CustomViewsPage",
       "/custom-views"
     ],
     "sourceProjects": [
@@ -5520,17 +5584,31 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:202",
-        "route": "/custom-views",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
         "path": "frontend/src/components/common/Sidebar.tsx:44",
         "route": "/custom-views",
         "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Custom Views Page",
+    "canonicalKey": "custom view",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/CustomViewsPage"
+    ],
+    "sourceProjects": [
+      "AIAutonomousPenTestingAgent",
+      "AICyberSOCCopilot",
+      "AIOTSecOpsForICS"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIAutonomousPenTestingAgent",
@@ -5551,13 +5629,6 @@
         "path": "frontend/src/pages/CustomViewsPage.js",
         "route": "/CustomViewsPage",
         "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/CustomViewsPage.js",
-        "route": "/CustomViewsPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
   },
@@ -5575,8 +5646,7 @@
       "AIAutonomousPenTestingAgent",
       "AICyberSOCCopilot",
       "AIDetectcombatmisinformatio",
-      "AIOTSecOpsForICS",
-      "security_detection"
+      "AIOTSecOpsForICS"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -5607,13 +5677,6 @@
         "kind": "page",
         "sourceProject": "AIOTSecOpsForICS",
         "path": "frontend/src/App.js:87",
-        "route": "/codex/custom-viz",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:159",
         "route": "/codex/custom-viz",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -5757,7 +5820,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:188",
+        "path": "frontend/src/App.tsx:172",
         "route": "/dashboard",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -6157,7 +6220,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:198",
+        "path": "frontend/src/App.tsx:182",
         "route": "/detection-rules",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -6166,6 +6229,32 @@
         "sourceProject": "security_detection",
         "path": "frontend/src/components/common/Sidebar.tsx:42",
         "route": "/detection-rules",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Detector Runs",
+    "canonicalKey": "detector runs",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/:id/detector-runs"
+    ],
+    "sourceProjects": [
+      "AIDetectcombatmisinformatio"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIDetectcombatmisinformatio",
+        "path": "server/routes/evidenceCases.js:26",
+        "route": "/:id/detector-runs",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -6190,8 +6279,34 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/alerts.py:40",
+        "path": "backend/python/api/routes/alerts.py:44",
         "route": "/dispatch",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Dispose",
+    "canonicalKey": "dispose",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/retention/dispose"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:195",
+        "route": "/{case_id}/retention/dispose",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -6248,7 +6363,7 @@
   },
   {
     "name": "Download Reports And Logs",
-    "canonicalKey": "and download logs reports",
+    "canonicalKey": "and download logs report",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -6420,6 +6535,32 @@
     ]
   },
   {
+    "name": "Engagement Readiness",
+    "canonicalKey": "engagement readiness",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/engagement-readiness"
+    ],
+    "sourceProjects": [
+      "AIAutonomousPenTestingAgent"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "backend/routes/runtimeAi.js:9",
+        "route": "/engagement-readiness",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Enrich",
     "canonicalKey": "enrich",
     "aliases": [],
@@ -6546,7 +6687,6 @@
     ],
     "sourceProjects": [
       "AIAutonomousPenTestingAgent",
-      "AICyberSOCCopilot",
       "AIDetectcombatmisinformatio"
     ],
     "consolidatedFromApps": [
@@ -6578,13 +6718,6 @@
         "kind": "api",
         "sourceProject": "AIAutonomousPenTestingAgent",
         "path": "backend/server.js:4",
-        "route": "../.env",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AICyberSOCCopilot",
-        "path": "backend/config/database.js:2",
         "route": "../.env",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -6736,21 +6869,48 @@
     "canonicalKey": "evidence",
     "aliases": [],
     "kinds": [
+      "api",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/cases/:id/evidence",
+      "/{case_id}/evidence"
+    ],
     "sourceProjects": [
-      "AICyberSOCCopilot"
+      "AICyberSOCCopilot",
+      "AIOTSecOpsForICS",
+      "security_detection"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
     ],
     "evidence": [
       {
+        "kind": "api",
+        "sourceProject": "AICyberSOCCopilot",
+        "path": "backend/routes/workflow.js:70",
+        "route": "/cases/:id/evidence",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
         "kind": "navigation",
         "sourceProject": "AICyberSOCCopilot",
         "path": "frontend/src/components/Navbar.js:25",
         "route": "",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:153",
+        "route": "/cases/:id/evidence",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:123",
+        "route": "/{case_id}/evidence",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -6888,32 +7048,6 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "frontend/src/pages/ExceptionsPage.js",
         "route": "/ExceptionsPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Execute",
-    "canonicalKey": "execute",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/execute"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/response.py:42",
-        "route": "/execute",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -7076,7 +7210,7 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai.py:113",
+        "path": "backend/python/api/routes/ai.py:101",
         "route": "/explain",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -7090,7 +7224,8 @@
       "api"
     ],
     "routes": [
-      "/sigma/{rule_id}/export"
+      "/sigma/{rule_id}/export",
+      "/{case_id}/exports"
     ],
     "sourceProjects": [
       "security_detection"
@@ -7104,6 +7239,13 @@
         "sourceProject": "security_detection",
         "path": "backend/python/api/routes/threat_hunting.py:651",
         "route": "/sigma/{rule_id}/export",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:187",
+        "route": "/{case_id}/exports",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -7404,6 +7546,32 @@
     ]
   },
   {
+    "name": "File",
+    "canonicalKey": "file",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/file"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:171",
+        "route": "/{case_id}/file",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Finding Severity Tree",
     "canonicalKey": "finding severity tree",
     "aliases": [],
@@ -7437,15 +7605,24 @@
       "api"
     ],
     "routes": [
-      "/hypotheses/{hunt_id}/findings"
+      "/hypotheses/{hunt_id}/findings",
+      "/plans/:id/findings"
     ],
     "sourceProjects": [
+      "AIAutonomousPenTestingAgent",
       "security_detection"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
     ],
     "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "backend/routes/authorizedTesting.js:21",
+        "route": "/plans/:id/findings",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
       {
         "kind": "api",
         "sourceProject": "security_detection",
@@ -7740,7 +7917,7 @@
   },
   {
     "name": "Gap Compliance Gap Mapping Vulns Pci",
-    "canonicalKey": "compliance gap mapping pci vulns",
+    "canonicalKey": "compliance gap mapping pci vuln",
     "aliases": [],
     "kinds": [
       "page"
@@ -7818,7 +7995,7 @@
   },
   {
     "name": "Gap Limited Fact Check Network Integration Snopes Factcheck",
-    "canonicalKey": "check fact factcheck gap integration limited network snopes",
+    "canonicalKey": "check fact factcheck gap integration limited network snope",
     "aliases": [],
     "kinds": [
       "page"
@@ -7869,17 +8046,17 @@
     ]
   },
   {
-    "name": "Gap Log Shippers Page",
-    "canonicalKey": "gap log shippers",
+    "name": "Gap Missing Verify Credential Validate Identity Issue Credential",
+    "canonicalKey": "credential gap identity issue missing validate verify",
     "aliases": [],
     "kinds": [
       "page"
     ],
     "routes": [
-      "/gap/GapLogShippersPage"
+      "/GapMissingVerifyCredentialValidateIdentityIssueCredential"
     ],
     "sourceProjects": [
-      "security_detection"
+      "AIDigitalIdentityVerifiableCredentials"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -7887,9 +8064,9 @@
     "evidence": [
       {
         "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapLogShippersPage.jsx",
-        "route": "/gap/GapLogShippersPage",
+        "sourceProject": "AIDigitalIdentityVerifiableCredentials",
+        "path": "client/src/pages/GapMissingVerifyCredentialValidateIdentityIssueCredential.jsx",
+        "route": "/GapMissingVerifyCredentialValidateIdentityIssueCredential",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -7921,86 +8098,8 @@
     ]
   },
   {
-    "name": "Gap Missing Verify Credential Validate Identity Issue Credential",
-    "canonicalKey": "credential gap identity issue missing validate verify",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapMissingVerifyCredentialValidateIdentityIssueCredential"
-    ],
-    "sourceProjects": [
-      "AIDigitalIdentityVerifiableCredentials"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIDigitalIdentityVerifiableCredentials",
-        "path": "client/src/pages/GapMissingVerifyCredentialValidateIdentityIssueCredential.jsx",
-        "route": "/GapMissingVerifyCredentialValidateIdentityIssueCredential",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Gap Mssp Portal Page",
-    "canonicalKey": "gap mssp portal",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapMsspPortalPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapMsspPortalPage.jsx",
-        "route": "/gap/GapMsspPortalPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Gap Multitenant Page",
-    "canonicalKey": "gap multitenant",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapMultitenantPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapMultitenantPage.jsx",
-        "route": "/gap/GapMultitenantPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Gap Nessus Qualys Openvas Rapid7 Scanner",
-    "canonicalKey": "gap nessus openvas qualys rapid7 scanner",
+    "canonicalKey": "gap nessus openva qualy rapid7 scanner",
     "aliases": [],
     "kinds": [
       "page"
@@ -8104,7 +8203,7 @@
   },
   {
     "name": "Gap No Notifications System",
-    "canonicalKey": "gap no notifications",
+    "canonicalKey": "gap no notification",
     "aliases": [],
     "kinds": [
       "page"
@@ -8276,7 +8375,7 @@
   },
   {
     "name": "Gap Notifications Subsystem",
-    "canonicalKey": "gap notifications subsystem",
+    "canonicalKey": "gap notification subsystem",
     "aliases": [],
     "kinds": [
       "page"
@@ -8302,7 +8401,7 @@
   },
   {
     "name": "Gap Outbound Webhooks Siem Soar",
-    "canonicalKey": "gap outbound siem soar webhooks",
+    "canonicalKey": "gap outbound siem soar webhook",
     "aliases": [],
     "kinds": [
       "page"
@@ -8327,86 +8426,8 @@
     ]
   },
   {
-    "name": "Gap Phishing Classifier Page",
-    "canonicalKey": "classifier gap phishing",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapPhishingClassifierPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapPhishingClassifierPage.jsx",
-        "route": "/gap/GapPhishingClassifierPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Gap Playbook Generator Page",
-    "canonicalKey": "gap generator playbook",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapPlaybookGeneratorPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapPlaybookGeneratorPage.jsx",
-        "route": "/gap/GapPlaybookGeneratorPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Gap Realtime Dashboard Page",
-    "canonicalKey": "dashboard gap realtime",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapRealtimeDashboardPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapRealtimeDashboardPage.jsx",
-        "route": "/gap/GapRealtimeDashboardPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Gap Remediation Orchestration Suggesting Fixes Tracking",
-    "canonicalKey": "fixes gap orchestration remediation suggesting tracking",
+    "canonicalKey": "fixe gap orchestration remediation suggesting tracking",
     "aliases": [],
     "kinds": [
       "page"
@@ -8457,34 +8478,8 @@
     ]
   },
   {
-    "name": "Gap Soar Ticketing Page",
-    "canonicalKey": "gap soar ticketing",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapSoarTicketingPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapSoarTicketingPage.jsx",
-        "route": "/gap/GapSoarTicketingPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Gap Sources Lacks AI Credibility Scoring Endpoint",
-    "canonicalKey": "ai credibility endpoint gap lacks scoring sources",
+    "canonicalKey": "ai credibility endpoint gap lack scoring source",
     "aliases": [],
     "kinds": [
       "page"
@@ -8510,7 +8505,7 @@
   },
   {
     "name": "Gap Trending Categories Lack AI Endpoints For Trend Prediction A",
-    "canonicalKey": "a ai categories endpoints for gap lack prediction trend trending",
+    "canonicalKey": "a ai category endpoint for gap lack prediction trend trending",
     "aliases": [],
     "kinds": [
       "page"
@@ -8530,32 +8525,6 @@
         "sourceProject": "AIDetectcombatmisinformatio",
         "path": "client/src/pages/GapTrendingCategoriesLackAiEndpointsForTrendPredictionA.js",
         "route": "/GapTrendingCategoriesLackAiEndpointsForTrendPredictionA",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Gap Ueba Page",
-    "canonicalKey": "gap ueba",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/GapUebaPage"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/pages/gap/GapUebaPage.jsx",
-        "route": "/gap/GapUebaPage",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -8862,14 +8831,14 @@
       {
         "kind": "api",
         "sourceProject": "AICyberSOCCopilot",
-        "path": "backend/server.js:45",
+        "path": "backend/server.js:28",
         "route": "/api/health",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "AIDetectcombatmisinformatio",
-        "path": "server/index.js:60",
+        "path": "server/index.js:63",
         "route": "/api/health",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -9044,21 +9013,21 @@
       {
         "kind": "api",
         "sourceProject": "AIDigitalIdentityVerifiableCredentials",
-        "path": "server/routes/zkVerify.js:94",
+        "path": "server/routes/zkVerify.js:95",
         "route": "/zk-verify/health",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "AIOTSecOpsForICS",
-        "path": "backend/server.js:28",
+        "path": "backend/server.js:32",
         "route": "/api/health",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/main.py:254",
+        "path": "backend/python/main.py:229",
         "route": "/health",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -9129,6 +9098,7 @@
       "api"
     ],
     "routes": [
+      "/cases/:id/history",
       "/history"
     ],
     "sourceProjects": [
@@ -9180,6 +9150,13 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "backend/routes/ai.js:355",
         "route": "/history",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:136",
+        "route": "/cases/:id/history",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
@@ -9384,7 +9361,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:195",
+        "path": "frontend/src/App.tsx:179",
         "route": "/hunting",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -9819,21 +9796,21 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/incidents.py:195",
+        "path": "backend/python/api/routes/incidents.py:196",
         "route": "/{incident_id}",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/incidents.py:279",
+        "path": "backend/python/api/routes/incidents.py:285",
         "route": "/{incident_id}",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/incidents.py:293",
+        "path": "backend/python/api/routes/incidents.py:316",
         "route": "/{incident_id}",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -9918,13 +9895,6 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:215",
-        "route": "/incidents",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
         "path": "backend/python/api/routes/bulk.py:107",
         "route": "/incidents",
         "originApp": "security-defense/autonomous-pen-testing-agent"
@@ -9953,7 +9923,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:190",
+        "path": "frontend/src/App.tsx:174",
         "route": "/incidents",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -9975,7 +9945,7 @@
   },
   {
     "name": "Incidents Screen",
-    "canonicalKey": "incidents screen",
+    "canonicalKey": "incident screen",
     "aliases": [],
     "kinds": [
       "page"
@@ -10179,32 +10149,6 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "frontend/src/pages/IntegrationsPage.js",
         "route": "/IntegrationsPage",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Intel Enrich",
-    "canonicalKey": "enrich intel",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/intel-enrich"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai_extras.py:119",
-        "route": "/intel-enrich",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -10456,7 +10400,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:197",
+        "path": "frontend/src/App.tsx:181",
         "route": "/kill-chain",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -10512,8 +10456,34 @@
     ]
   },
   {
+    "name": "Legal Hold",
+    "canonicalKey": "hold legal",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/legal-hold"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:179",
+        "route": "/{case_id}/legal-hold",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Limited Fact Check Network Integration Snopes Factcheck",
-    "canonicalKey": "check fact factcheck integration limited network snopes",
+    "canonicalKey": "check fact factcheck integration limited network snope",
     "aliases": [],
     "kinds": [
       "page"
@@ -10737,32 +10707,6 @@
     ]
   },
   {
-    "name": "Log Shippers",
-    "canonicalKey": "log shipper",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/log-shippers"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:214",
-        "route": "/gap/log-shippers",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Login",
     "canonicalKey": "login",
     "aliases": [
@@ -10775,7 +10719,8 @@
     "routes": [
       "/Login",
       "/LoginPage",
-      "/login"
+      "/login",
+      "api/auth/login"
     ],
     "sourceProjects": [
       "AIAutonomousPenTestingAgent",
@@ -10792,14 +10737,14 @@
       {
         "kind": "api",
         "sourceProject": "AIAutonomousPenTestingAgent",
-        "path": "backend/routes/auth.js:21",
+        "path": "backend/routes/auth.js:23",
         "route": "/login",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "AICyberSOCCopilot",
-        "path": "backend/routes/auth.js:32",
+        "path": "backend/routes/auth.js:11",
         "route": "/login",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -10813,7 +10758,7 @@
       {
         "kind": "api",
         "sourceProject": "AIDetectcombatmisinformatio",
-        "path": "server/routes/auth.js:7",
+        "path": "server/routes/auth.js:8",
         "route": "/login",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -10848,7 +10793,7 @@
       {
         "kind": "api",
         "sourceProject": "AIOTSecOpsForICS",
-        "path": "backend/routes/auth.js:33",
+        "path": "backend/routes/auth.js:36",
         "route": "/login",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -10860,9 +10805,16 @@
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/nodejs/src/index.ts:35",
+        "route": "api/auth/login",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:163",
+        "path": "frontend/src/App.tsx:147",
         "route": "/login",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -11167,12 +11119,16 @@
       "api"
     ],
     "routes": [
-      "/me"
+      "/me",
+      "api/auth/me"
     ],
     "sourceProjects": [
+      "AIAutonomousPenTestingAgent",
       "AICyberSOCCopilot",
+      "AIDetectcombatmisinformatio",
       "AIDigitalIdentityVerifiableCredentials",
-      "AIOTSecOpsForICS"
+      "AIOTSecOpsForICS",
+      "security_detection"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -11180,8 +11136,22 @@
     "evidence": [
       {
         "kind": "api",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "backend/routes/auth.js:48",
+        "route": "/me",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
         "sourceProject": "AICyberSOCCopilot",
-        "path": "backend/routes/auth.js:52",
+        "path": "backend/routes/auth.js:36",
+        "route": "/me",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIDetectcombatmisinformatio",
+        "path": "server/routes/auth.js:51",
         "route": "/me",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -11195,8 +11165,15 @@
       {
         "kind": "api",
         "sourceProject": "AIOTSecOpsForICS",
-        "path": "backend/routes/auth.js:67",
+        "path": "backend/routes/auth.js:58",
         "route": "/me",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/nodejs/src/index.ts:37",
+        "route": "api/auth/me",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -11317,7 +11294,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:196",
+        "path": "frontend/src/App.tsx:180",
         "route": "/mitre",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -11534,58 +11511,6 @@
     ]
   },
   {
-    "name": "Mssp Portal",
-    "canonicalKey": "mssp portal",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/mssp-portal"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:218",
-        "route": "/gap/mssp-portal",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Multitenant",
-    "canonicalKey": "multitenant",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/multitenant"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:217",
-        "route": "/gap/multitenant",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Narrative Cluster Attribution",
     "canonicalKey": "attribution cluster narrative",
     "aliases": [],
@@ -11678,10 +11603,10 @@
     ]
   },
   {
-    "name": "Network Conduits",
+    "name": "Network Conduits Page",
     "canonicalKey": "conduit network",
     "aliases": [
-      "Network Conduits Page"
+      "Network Conduits"
     ],
     "kinds": [
       "page"
@@ -11715,7 +11640,7 @@
   },
   {
     "name": "Network Conduits Zone Editor",
-    "canonicalKey": "conduits editor network zone",
+    "canonicalKey": "conduit editor network zone",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -11824,7 +11749,7 @@
   },
   {
     "name": "Network Zones Purdue",
-    "canonicalKey": "network purdue zones",
+    "canonicalKey": "network purdue zone",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -11848,7 +11773,7 @@
   },
   {
     "name": "No Notifications System",
-    "canonicalKey": "no notifications",
+    "canonicalKey": "no notification",
     "aliases": [],
     "kinds": [
       "page"
@@ -11975,6 +11900,32 @@
     ]
   },
   {
+    "name": "Offers",
+    "canonicalKey": "offer",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/offers"
+    ],
+    "sourceProjects": [
+      "AIDigitalIdentityVerifiableCredentials"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIDigitalIdentityVerifiableCredentials",
+        "path": "server/routes/credentialLifecycle.js:8",
+        "route": "/offers",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "On Call",
     "canonicalKey": "call on",
     "aliases": [],
@@ -12017,7 +11968,7 @@
   },
   {
     "name": "On Call Escalations Page",
-    "canonicalKey": "call escalations on",
+    "canonicalKey": "call escalation on",
     "aliases": [],
     "kinds": [
       "page"
@@ -12056,8 +12007,7 @@
       "AIAutonomousPenTestingAgent",
       "AICyberSOCCopilot",
       "AIDetectcombatmisinformatio",
-      "AIOTSecOpsForICS",
-      "security_detection"
+      "AIOTSecOpsForICS"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -12095,13 +12045,6 @@
         "kind": "page",
         "sourceProject": "AIOTSecOpsForICS",
         "path": "frontend/src/App.js:88",
-        "route": "/codex/operations",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:160",
         "route": "/codex/operations",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -12433,7 +12376,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:165",
+        "path": "frontend/src/App.tsx:149",
         "route": "/password-reset",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -12513,12 +12456,10 @@
       "api"
     ],
     "routes": [
-      "/incidents/:id/pdf",
       "/reports/:id/pdf"
     ],
     "sourceProjects": [
-      "AIAutonomousPenTestingAgent",
-      "security_detection"
+      "AIAutonomousPenTestingAgent"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -12529,13 +12470,6 @@
         "sourceProject": "AIAutonomousPenTestingAgent",
         "path": "backend/routes/aiReport.js:149",
         "route": "/reports/:id/pdf",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:230",
-        "route": "/incidents/:id/pdf",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -12667,12 +12601,10 @@
     ],
     "routes": [
       "/ai/phishing-classifier",
-      "/gap/phishing-classifier",
       "/phishing-classifier"
     ],
     "sourceProjects": [
-      "AICyberSOCCopilot",
-      "security_detection"
+      "AICyberSOCCopilot"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -12712,13 +12644,6 @@
         "path": "frontend/src/components/Sidebar.js:93",
         "route": "/ai/phishing-classifier",
         "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:213",
-        "route": "/gap/phishing-classifier",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
   },
@@ -12747,27 +12672,27 @@
     ]
   },
   {
-    "name": "Playbook Generator",
-    "canonicalKey": "generator playbook",
+    "name": "Plans",
+    "canonicalKey": "plan",
     "aliases": [],
     "kinds": [
-      "page"
+      "api"
     ],
     "routes": [
-      "/gap/playbook-generator"
+      "/plans"
     ],
     "sourceProjects": [
-      "security_detection"
+      "AIAutonomousPenTestingAgent"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
     ],
     "evidence": [
       {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:212",
-        "route": "/gap/playbook-generator",
+        "kind": "api",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "backend/routes/authorizedTesting.js:7",
+        "route": "/plans",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -12864,18 +12789,15 @@
       "Playbooks Page"
     ],
     "kinds": [
-      "api",
       "navigation",
       "page"
     ],
     "routes": [
       "/PlaybooksPage",
-      "/auto-response/playbook",
       "/playbooks"
     ],
     "sourceProjects": [
-      "AICyberSOCCopilot",
-      "security_detection"
+      "AICyberSOCCopilot"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -12921,13 +12843,6 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "frontend/src/components/Sidebar.js:22",
         "route": "/playbooks",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai_extras.py:109",
-        "route": "/auto-response/playbook",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
@@ -12990,10 +12905,12 @@
       "api"
     ],
     "routes": [
-      "/policies"
+      "/policies",
+      "/policy"
     ],
     "sourceProjects": [
-      "AICyberSOCCopilot"
+      "AICyberSOCCopilot",
+      "AIOTSecOpsForICS"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -13011,6 +12928,13 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "backend/routes/oncall_escalations.js:31",
         "route": "/policies",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:52",
+        "route": "/policy",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -13627,13 +13551,11 @@
     ],
     "routes": [
       "/jira/push",
-      "/mobile/push",
       "/pagerduty/push",
       "/servicenow/push"
     ],
     "sourceProjects": [
-      "AICyberSOCCopilot",
-      "security_detection"
+      "AICyberSOCCopilot"
     ],
     "consolidatedFromApps": [
       "security-defense/autonomous-pen-testing-agent"
@@ -13658,13 +13580,6 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "backend/routes/integrations_ticketing.js:40",
         "route": "/pagerduty/push",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai_extras.py:152",
-        "route": "/mobile/push",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -13725,32 +13640,6 @@
         "sourceProject": "AICyberSOCCopilot",
         "path": "backend/routes/notifications.js:58",
         "route": "/read-all",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Realtime Dashboard",
-    "canonicalKey": "dashboard realtime",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/realtime-dashboard"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:216",
-        "route": "/gap/realtime-dashboard",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -13834,8 +13723,34 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai.py:146",
+        "path": "backend/python/api/routes/ai.py:136",
         "route": "/recommend",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Reconcile",
+    "canonicalKey": "reconcile",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/signatures/reconcile"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:163",
+        "route": "/{case_id}/signatures/reconcile",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -13940,7 +13855,8 @@
     ],
     "routes": [
       "/Register",
-      "/register"
+      "/register",
+      "api/auth/register"
     ],
     "sourceProjects": [
       "AIAutonomousPenTestingAgent",
@@ -13954,21 +13870,28 @@
       {
         "kind": "api",
         "sourceProject": "AIAutonomousPenTestingAgent",
-        "path": "backend/routes/auth.js:46",
+        "path": "backend/routes/auth.js:62",
         "route": "/register",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "api",
         "sourceProject": "AIDetectcombatmisinformatio",
-        "path": "server/routes/auth.js:30",
+        "path": "server/routes/auth.js:31",
         "route": "/register",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/nodejs/src/index.ts:36",
+        "route": "api/auth/register",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:164",
+        "path": "frontend/src/App.tsx:148",
         "route": "/register",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -14363,6 +14286,32 @@
     ]
   },
   {
+    "name": "Reviews",
+    "canonicalKey": "review",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/reviews"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:147",
+        "route": "/{case_id}/reviews",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Revocation Impact",
     "canonicalKey": "impact revocation",
     "aliases": [],
@@ -14410,6 +14359,32 @@
         "sourceProject": "AIDigitalIdentityVerifiableCredentials",
         "path": "server/routes/revocationMonitor.js:58",
         "route": "/revocation-monitor",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Revoke",
+    "canonicalKey": "revoke",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/access/revoke"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:115",
+        "route": "/{case_id}/access/revoke",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -14613,20 +14588,6 @@
       "security-defense/autonomous-pen-testing-agent"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:290",
-        "route": "/rules",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:295",
-        "route": "/rules",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
       {
         "kind": "api",
         "sourceProject": "security_detection",
@@ -14919,15 +14880,12 @@
   },
   {
     "name": "Safety Systems",
-    "canonicalKey": "safety system",
-    "aliases": [
-      "Safety Systems Page"
-    ],
+    "canonicalKey": "safety",
+    "aliases": [],
     "kinds": [
       "page"
     ],
     "routes": [
-      "/SafetySystemsPage",
       "/safety-systems"
     ],
     "sourceProjects": [
@@ -14950,7 +14908,26 @@
         "path": "frontend/src/pages/Dashboard.js:10",
         "route": "/safety-systems",
         "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Safety Systems Page",
+    "canonicalKey": "safety system",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/SafetySystemsPage"
+    ],
+    "sourceProjects": [
+      "AIOTSecOpsForICS"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIOTSecOpsForICS",
@@ -14962,7 +14939,7 @@
   },
   {
     "name": "Safety Systems Sis",
-    "canonicalKey": "safety sis systems",
+    "canonicalKey": "safety sis system",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -15215,7 +15192,7 @@
   },
   {
     "name": "Secrets Vault",
-    "canonicalKey": "secrets vault",
+    "canonicalKey": "secret vault",
     "aliases": [
       "Secrets Vault Page"
     ],
@@ -15451,7 +15428,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:193",
+        "path": "frontend/src/App.tsx:177",
         "route": "/settings",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -15473,7 +15450,7 @@
   },
   {
     "name": "Settings Screen",
-    "canonicalKey": "screen settings",
+    "canonicalKey": "screen setting",
     "aliases": [],
     "kinds": [
       "page"
@@ -15646,7 +15623,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:194",
+        "path": "frontend/src/App.tsx:178",
         "route": "/siem",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -15719,6 +15696,32 @@
     ]
   },
   {
+    "name": "Signatures",
+    "canonicalKey": "signature",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/signatures"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:155",
+        "route": "/{case_id}/signatures",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Sis Audit Page",
     "canonicalKey": "audit sis",
     "aliases": [
@@ -15779,32 +15782,6 @@
     ]
   },
   {
-    "name": "Soar Ticketing",
-    "canonicalKey": "soar ticketing",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/gap/soar-ticketing"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:215",
-        "route": "/gap/soar-ticketing",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Soc Analyst",
     "canonicalKey": "analyst soc",
     "aliases": [],
@@ -15825,7 +15802,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:199",
+        "path": "frontend/src/App.tsx:183",
         "route": "/soc-analyst",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -16088,7 +16065,7 @@
   },
   {
     "name": "Sources Lacks AI Credibility Scoring Endpoint",
-    "canonicalKey": "ai credibility endpoint lacks scoring sources",
+    "canonicalKey": "ai credibility endpoint lack scoring source",
     "aliases": [],
     "kinds": [
       "page"
@@ -16139,7 +16116,7 @@
       {
         "kind": "api",
         "sourceProject": "AIAutonomousPenTestingAgent",
-        "path": "backend/server.js:193",
+        "path": "backend/server.js:192",
         "route": "/api/stats",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -16153,7 +16130,7 @@
       {
         "kind": "api",
         "sourceProject": "AIDigitalIdentityVerifiableCredentials",
-        "path": "server/index.js:123",
+        "path": "server/index.js:126",
         "route": "/api/dashboard/stats",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -16263,6 +16240,32 @@
     ]
   },
   {
+    "name": "Stop",
+    "canonicalKey": "stop",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/plans/:id/stop"
+    ],
+    "sourceProjects": [
+      "AIAutonomousPenTestingAgent"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIAutonomousPenTestingAgent",
+        "path": "backend/routes/authorizedTesting.js:25",
+        "route": "/plans/:id/stop",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Stream",
     "canonicalKey": "stream",
     "aliases": [],
@@ -16284,6 +16287,32 @@
         "sourceProject": "security_detection",
         "path": "backend/python/api/routes/siem.py:216",
         "route": "/logs/stream",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
+    "name": "Submit Review",
+    "canonicalKey": "review submit",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/{case_id}/submit-review"
+    ],
+    "sourceProjects": [
+      "security_detection"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "security_detection",
+        "path": "backend/python/api/routes/investigation_cases.py:139",
+        "route": "/{case_id}/submit-review",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -16692,32 +16721,6 @@
     ]
   },
   {
-    "name": "Template",
-    "canonicalKey": "template",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/template"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/alerts.py:95",
-        "route": "/template",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Tenant Entity",
     "canonicalKey": "entity tenant",
     "aliases": [],
@@ -16743,7 +16746,7 @@
   },
   {
     "name": "Tenant Settings Entity",
-    "canonicalKey": "entity settings tenant",
+    "canonicalKey": "entity setting tenant",
     "aliases": [],
     "kinds": [
       "model"
@@ -16774,7 +16777,6 @@
     ],
     "routes": [
       "/ai/test",
-      "/rules/test",
       "/rules/{rule_id}/test",
       "/test"
     ],
@@ -16804,13 +16806,6 @@
       {
         "kind": "api",
         "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:338",
-        "route": "/rules/test",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
         "path": "backend/python/api/routes/advanced_detection.py:160",
         "route": "/rules/{rule_id}/test",
         "originApp": "security-defense/autonomous-pen-testing-agent"
@@ -16820,32 +16815,6 @@
         "sourceProject": "security_detection",
         "path": "backend/python/tests/test_ai_rate_limit.py:18",
         "route": "/ai/test",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Threat Feed",
-    "canonicalKey": "feed threat",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/threat-feed"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/nodejs/src/customViews.js:193",
-        "route": "/threat-feed",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -16943,7 +16912,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:191",
+        "path": "frontend/src/App.tsx:175",
         "route": "/threat-intel",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -17034,7 +17003,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:200",
+        "path": "frontend/src/App.tsx:184",
         "route": "/threat-intel-feeds",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -17137,32 +17106,6 @@
         "sourceProject": "AIAutonomousPenTestingAgent",
         "path": "backend/routes/aiAnalysis.js:718",
         "route": "/threat-model",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
-    "name": "Ticket",
-    "canonicalKey": "ticket",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/soar/ticket"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai_extras.py:131",
-        "route": "/soar/ticket",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
     ]
@@ -17293,6 +17236,58 @@
     ]
   },
   {
+    "name": "Transition",
+    "canonicalKey": "transition",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/:id/transition",
+      "/cases/:id/transition",
+      "/cases/:id/transitions"
+    ],
+    "sourceProjects": [
+      "AICyberSOCCopilot",
+      "AIDetectcombatmisinformatio",
+      "AIDigitalIdentityVerifiableCredentials",
+      "AIOTSecOpsForICS"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AICyberSOCCopilot",
+        "path": "backend/routes/workflow.js:98",
+        "route": "/cases/:id/transition",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIDetectcombatmisinformatio",
+        "path": "server/routes/evidenceCases.js:37",
+        "route": "/:id/transition",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIDigitalIdentityVerifiableCredentials",
+        "path": "server/routes/credentialLifecycle.js:14",
+        "route": "/:id/transition",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIOTSecOpsForICS",
+        "path": "backend/governance/routerFactory.js:225",
+        "route": "/cases/:id/transitions",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Trend Prediction",
     "canonicalKey": "prediction trend",
     "aliases": [],
@@ -17384,7 +17379,7 @@
   },
   {
     "name": "Trending Categories Lack AI Endpoints For Trend Prediction A",
-    "canonicalKey": "a ai categories endpoints for lack prediction trend trending",
+    "canonicalKey": "a ai category endpoint for lack prediction trend trending",
     "aliases": [],
     "kinds": [
       "page"
@@ -17636,41 +17631,6 @@
     ]
   },
   {
-    "name": "Ueba",
-    "canonicalKey": "ueba",
-    "aliases": [],
-    "kinds": [
-      "api",
-      "page"
-    ],
-    "routes": [
-      "/gap/ueba",
-      "/ueba"
-    ],
-    "sourceProjects": [
-      "security_detection"
-    ],
-    "consolidatedFromApps": [
-      "security-defense/autonomous-pen-testing-agent"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "security_detection",
-        "path": "backend/python/api/routes/ai_extras.py:90",
-        "route": "/ueba",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:211",
-        "route": "/gap/ueba",
-        "originApp": "security-defense/autonomous-pen-testing-agent"
-      }
-    ]
-  },
-  {
     "name": "Unread",
     "canonicalKey": "unread",
     "aliases": [],
@@ -17816,7 +17776,7 @@
       {
         "kind": "api",
         "sourceProject": "AIOTSecOpsForICS",
-        "path": "backend/routes/auth.js:78",
+        "path": "backend/routes/auth.js:73",
         "route": "/users",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -17849,10 +17809,10 @@
     ]
   },
   {
-    "name": "Vendor Advisories",
+    "name": "Vendor Advisories Page",
     "canonicalKey": "advisory vendor",
     "aliases": [
-      "Vendor Advisories Page"
+      "Vendor Advisories"
     ],
     "kinds": [
       "page"
@@ -18143,6 +18103,32 @@
     ]
   },
   {
+    "name": "Verify",
+    "canonicalKey": "verify",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/:id/presentations/verify"
+    ],
+    "sourceProjects": [
+      "AIDigitalIdentityVerifiableCredentials"
+    ],
+    "consolidatedFromApps": [
+      "security-defense/autonomous-pen-testing-agent"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIDigitalIdentityVerifiableCredentials",
+        "path": "server/routes/credentialLifecycle.js:19",
+        "route": "/:id/presentations/verify",
+        "originApp": "security-defense/autonomous-pen-testing-agent"
+      }
+    ]
+  },
+  {
     "name": "Verify Email",
     "canonicalKey": "email verify",
     "aliases": [],
@@ -18162,7 +18148,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:166",
+        "path": "frontend/src/App.tsx:150",
         "route": "/verify-email",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }
@@ -18493,7 +18479,7 @@
       {
         "kind": "page",
         "sourceProject": "security_detection",
-        "path": "frontend/src/App.tsx:189",
+        "path": "frontend/src/App.tsx:173",
         "route": "/workflow",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       },
@@ -18659,7 +18645,7 @@
       {
         "kind": "api",
         "sourceProject": "AIDigitalIdentityVerifiableCredentials",
-        "path": "server/routes/zkVerify.js:58",
+        "path": "server/routes/zkVerify.js:59",
         "route": "/zk-verify",
         "originApp": "security-defense/autonomous-pen-testing-agent"
       }

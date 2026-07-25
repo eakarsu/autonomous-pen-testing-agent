@@ -7,184 +7,1924 @@
       "title": "Security Alert Ingestion",
       "description": "Normalize alerts from a declared local file, manual entry, webhook test, or configured security provider.",
       "fields": [
-        {"key": "sourceName", "label": "Source Name", "type": "text", "required": true},
-        {"key": "sourceType", "label": "Source Type", "type": "select", "required": true, "options": ["SIEM", "EDR", "Email", "Webhook", "CSV", "Manual"]},
-        {"key": "ingestionMode", "label": "Ingestion Mode", "type": "select", "required": true, "options": ["Local fixture", "Manual entry", "Configured connector"]},
-        {"key": "payloadReference", "label": "Payload Reference", "type": "text", "required": true},
-        {"key": "providerStatus", "label": "Provider Status", "type": "select", "required": true, "options": ["Not required", "Not configured", "Configured"]}
+        {
+          "key": "sourceName",
+          "label": "Source Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "sourceType",
+          "label": "Source Type",
+          "type": "select",
+          "required": true,
+          "options": [
+            "SIEM",
+            "EDR",
+            "Email",
+            "Webhook",
+            "CSV",
+            "Manual"
+          ]
+        },
+        {
+          "key": "ingestionMode",
+          "label": "Ingestion Mode",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local fixture",
+            "Manual entry",
+            "Configured connector"
+          ]
+        },
+        {
+          "key": "payloadReference",
+          "label": "Payload Reference",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "providerStatus",
+          "label": "Provider Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Not required",
+            "Not configured",
+            "Configured"
+          ]
+        }
       ],
-      "states": ["draft", "testing", "active", "paused", "error"],
+      "states": [
+        "draft",
+        "testing",
+        "active",
+        "paused",
+        "error"
+      ],
       "transitions": [
-        {"id": "test", "label": "Test Normalization", "from": ["draft", "error"], "to": "testing"},
-        {"id": "activate", "label": "Activate Source", "from": ["testing", "paused"], "to": "active"},
-        {"id": "pause", "label": "Pause Source", "from": ["active"], "to": "paused"},
-        {"id": "error", "label": "Record Ingestion Error", "from": ["testing", "active"], "to": "error"}
+        {
+          "id": "test",
+          "label": "Test Normalization",
+          "from": [
+            "draft",
+            "error"
+          ],
+          "to": "testing"
+        },
+        {
+          "id": "activate",
+          "label": "Activate Source",
+          "from": [
+            "testing",
+            "paused"
+          ],
+          "to": "active"
+        },
+        {
+          "id": "pause",
+          "label": "Pause Source",
+          "from": [
+            "active"
+          ],
+          "to": "paused"
+        },
+        {
+          "id": "error",
+          "label": "Record Ingestion Error",
+          "from": [
+            "testing",
+            "active"
+          ],
+          "to": "error"
+        }
       ],
-      "seeds": [{"id": "alert-source-1001", "state": "draft", "sourceName": "SOC sample alerts", "sourceType": "CSV", "ingestionMode": "Local fixture", "payloadReference": "fixtures/alerts-july.csv", "providerStatus": "Not required"}]
+      "seeds": [
+        {
+          "id": "alert-ingestion-001",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — North Region — North Region",
+          "sourceType": "SIEM",
+          "ingestionMode": "Local fixture",
+          "payloadReference": "AUTONOMOUS-0001",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "alert-ingestion-002",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Enterprise Account — Enterprise Account",
+          "sourceType": "EDR",
+          "ingestionMode": "Manual entry",
+          "payloadReference": "AUTONOMOUS-0002",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "alert-ingestion-003",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Quarterly Cycle — Quarterly Cycle",
+          "sourceType": "Email",
+          "ingestionMode": "Configured connector",
+          "payloadReference": "AUTONOMOUS-0003",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "alert-ingestion-004",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Priority Queue — Priority Queue",
+          "sourceType": "Webhook",
+          "ingestionMode": "Local fixture",
+          "payloadReference": "AUTONOMOUS-0004",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "alert-ingestion-005",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Operations Review — Operations Review",
+          "sourceType": "CSV",
+          "ingestionMode": "Manual entry",
+          "payloadReference": "AUTONOMOUS-0005",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "alert-ingestion-006",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Customer Request — Customer Request",
+          "sourceType": "Manual",
+          "ingestionMode": "Configured connector",
+          "payloadReference": "AUTONOMOUS-0006",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "alert-ingestion-007",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Compliance Check — Compliance Check",
+          "sourceType": "SIEM",
+          "ingestionMode": "Local fixture",
+          "payloadReference": "AUTONOMOUS-0007",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "alert-ingestion-008",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Service Window — Service Window",
+          "sourceType": "EDR",
+          "ingestionMode": "Manual entry",
+          "payloadReference": "AUTONOMOUS-0008",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "alert-ingestion-009",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Quality Sample — Quality Sample",
+          "sourceType": "Email",
+          "ingestionMode": "Configured connector",
+          "payloadReference": "AUTONOMOUS-0009",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "alert-ingestion-010",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Management Review — Management Review",
+          "sourceType": "Webhook",
+          "ingestionMode": "Local fixture",
+          "payloadReference": "AUTONOMOUS-0010",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "alert-ingestion-011",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Exception Follow-up — Exception Follow-up",
+          "sourceType": "CSV",
+          "ingestionMode": "Manual entry",
+          "payloadReference": "AUTONOMOUS-0011",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "alert-ingestion-012",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Evidence Package — Evidence Package",
+          "sourceType": "Manual",
+          "ingestionMode": "Configured connector",
+          "payloadReference": "AUTONOMOUS-0012",
+          "providerStatus": "Configured"
+        },
+        {
+          "id": "alert-ingestion-013",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Planning Cycle — Planning Cycle",
+          "sourceType": "SIEM",
+          "ingestionMode": "Local fixture",
+          "payloadReference": "AUTONOMOUS-0013",
+          "providerStatus": "Not required"
+        },
+        {
+          "id": "alert-ingestion-014",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Performance Review — Performance Review",
+          "sourceType": "EDR",
+          "ingestionMode": "Manual entry",
+          "payloadReference": "AUTONOMOUS-0014",
+          "providerStatus": "Not configured"
+        },
+        {
+          "id": "alert-ingestion-015",
+          "state": "draft",
+          "sourceName": "SOC sample alerts — Final Verification — Final Verification",
+          "sourceType": "Email",
+          "ingestionMode": "Configured connector",
+          "payloadReference": "AUTONOMOUS-0015",
+          "providerStatus": "Configured"
+        }
+      ]
     },
     {
       "id": "ai-triage",
       "title": "Alert Triage and Analyst Decision",
       "description": "Score severity, identify likely false positives, classify an alert, and require an analyst disposition.",
       "fields": [
-        {"key": "alertId", "label": "Alert ID", "type": "text", "required": true},
-        {"key": "triageMode", "label": "Triage Mode", "type": "select", "required": true, "options": ["Local rules", "Manual assessment", "Configured AI provider"]},
-        {"key": "severityThreshold", "label": "Escalation Threshold", "type": "number", "required": true},
-        {"key": "analyst", "label": "Reviewing Analyst", "type": "text", "required": true},
-        {"key": "initialContext", "label": "Initial Context", "type": "textarea", "required": true}
+        {
+          "key": "alertId",
+          "label": "Alert ID",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "triageMode",
+          "label": "Triage Mode",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local rules",
+            "Manual assessment",
+            "Configured AI provider"
+          ]
+        },
+        {
+          "key": "severityThreshold",
+          "label": "Escalation Threshold",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "analyst",
+          "label": "Reviewing Analyst",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "initialContext",
+          "label": "Initial Context",
+          "type": "textarea",
+          "required": true
+        }
       ],
-      "states": ["queued", "running", "recommendation-ready", "analyst-review", "accepted", "rejected"],
+      "states": [
+        "queued",
+        "running",
+        "recommendation-ready",
+        "analyst-review",
+        "accepted",
+        "rejected"
+      ],
       "transitions": [
-        {"id": "run", "label": "Run Triage", "from": ["queued"], "to": "running"},
-        {"id": "recommend", "label": "Create Recommendation", "from": ["running"], "to": "recommendation-ready"},
-        {"id": "review", "label": "Start Analyst Review", "from": ["recommendation-ready"], "to": "analyst-review"},
-        {"id": "accept", "label": "Accept Recommendation", "from": ["analyst-review"], "to": "accepted"},
-        {"id": "reject", "label": "Override Recommendation", "from": ["analyst-review"], "to": "rejected"}
+        {
+          "id": "run",
+          "label": "Run Triage",
+          "from": [
+            "queued"
+          ],
+          "to": "running"
+        },
+        {
+          "id": "recommend",
+          "label": "Create Recommendation",
+          "from": [
+            "running"
+          ],
+          "to": "recommendation-ready"
+        },
+        {
+          "id": "review",
+          "label": "Start Analyst Review",
+          "from": [
+            "recommendation-ready"
+          ],
+          "to": "analyst-review"
+        },
+        {
+          "id": "accept",
+          "label": "Accept Recommendation",
+          "from": [
+            "analyst-review"
+          ],
+          "to": "accepted"
+        },
+        {
+          "id": "reject",
+          "label": "Override Recommendation",
+          "from": [
+            "analyst-review"
+          ],
+          "to": "rejected"
+        }
       ],
-      "seeds": [{"id": "triage-run-1001", "state": "queued", "alertId": "SEC-ALT-1001", "triageMode": "Local rules", "severityThreshold": 70, "analyst": "Mina Shah", "initialContext": "Repeated failed logins followed by a successful privileged session."}]
+      "seeds": [
+        {
+          "id": "ai-triage-001",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0001",
+          "triageMode": "Local rules",
+          "severityThreshold": 70.0,
+          "analyst": "Avery Morgan",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — North Region — North Region"
+        },
+        {
+          "id": "ai-triage-002",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0002",
+          "triageMode": "Manual assessment",
+          "severityThreshold": 72.0,
+          "analyst": "Jordan Lee",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Enterprise Account — Enterprise Account"
+        },
+        {
+          "id": "ai-triage-003",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0003",
+          "triageMode": "Configured AI provider",
+          "severityThreshold": 74.0,
+          "analyst": "Taylor Brooks",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Quarterly Cycle — Quarterly Cycle"
+        },
+        {
+          "id": "ai-triage-004",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0004",
+          "triageMode": "Local rules",
+          "severityThreshold": 76.0,
+          "analyst": "Morgan Chen",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Priority Queue — Priority Queue"
+        },
+        {
+          "id": "ai-triage-005",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0005",
+          "triageMode": "Manual assessment",
+          "severityThreshold": 78.0,
+          "analyst": "Riley Patel",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Operations Review — Operations Review"
+        },
+        {
+          "id": "ai-triage-006",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0006",
+          "triageMode": "Configured AI provider",
+          "severityThreshold": 80.0,
+          "analyst": "Casey Nguyen",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Customer Request — Customer Request"
+        },
+        {
+          "id": "ai-triage-007",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0007",
+          "triageMode": "Local rules",
+          "severityThreshold": 82.0,
+          "analyst": "Cameron Diaz",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Compliance Check — Compliance Check"
+        },
+        {
+          "id": "ai-triage-008",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0008",
+          "triageMode": "Manual assessment",
+          "severityThreshold": 84.0,
+          "analyst": "Drew Wilson",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Service Window — Service Window"
+        },
+        {
+          "id": "ai-triage-009",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0009",
+          "triageMode": "Configured AI provider",
+          "severityThreshold": 86.0,
+          "analyst": "Emerson Clark",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Quality Sample — Quality Sample"
+        },
+        {
+          "id": "ai-triage-010",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0010",
+          "triageMode": "Local rules",
+          "severityThreshold": 88.0,
+          "analyst": "Hayden Kim",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Management Review — Management Review"
+        },
+        {
+          "id": "ai-triage-011",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0011",
+          "triageMode": "Manual assessment",
+          "severityThreshold": 90.0,
+          "analyst": "Jamie Rivera",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Exception Follow-up — Exception Follow-up"
+        },
+        {
+          "id": "ai-triage-012",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0012",
+          "triageMode": "Configured AI provider",
+          "severityThreshold": 92.0,
+          "analyst": "Kai Thompson",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Evidence Package — Evidence Package"
+        },
+        {
+          "id": "ai-triage-013",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0013",
+          "triageMode": "Local rules",
+          "severityThreshold": 94.0,
+          "analyst": "Logan Shah",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Planning Cycle — Planning Cycle"
+        },
+        {
+          "id": "ai-triage-014",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0014",
+          "triageMode": "Manual assessment",
+          "severityThreshold": 96.0,
+          "analyst": "Parker Evans",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Performance Review — Performance Review"
+        },
+        {
+          "id": "ai-triage-015",
+          "state": "queued",
+          "alertId": "AUTONOMOUS-0015",
+          "triageMode": "Configured AI provider",
+          "severityThreshold": 98.0,
+          "analyst": "Quinn Murphy",
+          "initialContext": "Repeated failed logins followed by a successful privileged session. — Final Verification — Final Verification"
+        }
+      ]
     },
     {
       "id": "incident-timeline",
       "title": "Incident Timeline",
       "description": "Build and verify an incident chronology from alerts, comments, evidence, enrichment, and response steps.",
       "fields": [
-        {"key": "incidentId", "label": "Incident ID", "type": "text", "required": true},
-        {"key": "eventDate", "label": "Event Date", "type": "date", "required": true},
-        {"key": "eventType", "label": "Event Type", "type": "select", "required": true, "options": ["Alert", "Comment", "Evidence", "Enrichment", "Remediation"]},
-        {"key": "summary", "label": "Event Summary", "type": "textarea", "required": true},
-        {"key": "evidenceReference", "label": "Evidence Reference", "type": "text", "required": true}
+        {
+          "key": "incidentId",
+          "label": "Incident ID",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "eventDate",
+          "label": "Event Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "key": "eventType",
+          "label": "Event Type",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Alert",
+            "Comment",
+            "Evidence",
+            "Enrichment",
+            "Remediation"
+          ]
+        },
+        {
+          "key": "summary",
+          "label": "Event Summary",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "evidenceReference",
+          "label": "Evidence Reference",
+          "type": "text",
+          "required": true
+        }
       ],
-      "states": ["draft", "recorded", "verified", "corrected"],
+      "states": [
+        "draft",
+        "recorded",
+        "verified",
+        "corrected"
+      ],
       "transitions": [
-        {"id": "record", "label": "Record Event", "from": ["draft", "corrected"], "to": "recorded"},
-        {"id": "verify", "label": "Verify Event", "from": ["recorded"], "to": "verified"},
-        {"id": "correct", "label": "Request Correction", "from": ["recorded", "verified"], "to": "corrected"}
+        {
+          "id": "record",
+          "label": "Record Event",
+          "from": [
+            "draft",
+            "corrected"
+          ],
+          "to": "recorded"
+        },
+        {
+          "id": "verify",
+          "label": "Verify Event",
+          "from": [
+            "recorded"
+          ],
+          "to": "verified"
+        },
+        {
+          "id": "correct",
+          "label": "Request Correction",
+          "from": [
+            "recorded",
+            "verified"
+          ],
+          "to": "corrected"
+        }
       ],
-      "seeds": [{"id": "timeline-event-1001", "state": "draft", "incidentId": "INC-2026-041", "eventDate": "2026-07-13", "eventType": "Alert", "summary": "Privileged login alert normalized from the local SOC fixture.", "evidenceReference": "EVD-INC041-01"}]
+      "seeds": [
+        {
+          "id": "incident-timeline-001",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0001",
+          "eventDate": "2026-07-13",
+          "eventType": "Alert",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — North Region — North Region",
+          "evidenceReference": "AUTONOMOUS-0001"
+        },
+        {
+          "id": "incident-timeline-002",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0002",
+          "eventDate": "2026-07-15",
+          "eventType": "Comment",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Enterprise Account — Enterprise Account",
+          "evidenceReference": "AUTONOMOUS-0002"
+        },
+        {
+          "id": "incident-timeline-003",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0003",
+          "eventDate": "2026-07-17",
+          "eventType": "Evidence",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Quarterly Cycle — Quarterly Cycle",
+          "evidenceReference": "AUTONOMOUS-0003"
+        },
+        {
+          "id": "incident-timeline-004",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0004",
+          "eventDate": "2026-07-19",
+          "eventType": "Enrichment",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Priority Queue — Priority Queue",
+          "evidenceReference": "AUTONOMOUS-0004"
+        },
+        {
+          "id": "incident-timeline-005",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0005",
+          "eventDate": "2026-07-21",
+          "eventType": "Remediation",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Operations Review — Operations Review",
+          "evidenceReference": "AUTONOMOUS-0005"
+        },
+        {
+          "id": "incident-timeline-006",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0006",
+          "eventDate": "2026-07-23",
+          "eventType": "Alert",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Customer Request — Customer Request",
+          "evidenceReference": "AUTONOMOUS-0006"
+        },
+        {
+          "id": "incident-timeline-007",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0007",
+          "eventDate": "2026-07-25",
+          "eventType": "Comment",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Compliance Check — Compliance Check",
+          "evidenceReference": "AUTONOMOUS-0007"
+        },
+        {
+          "id": "incident-timeline-008",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0008",
+          "eventDate": "2026-07-27",
+          "eventType": "Evidence",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Service Window — Service Window",
+          "evidenceReference": "AUTONOMOUS-0008"
+        },
+        {
+          "id": "incident-timeline-009",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0009",
+          "eventDate": "2026-07-29",
+          "eventType": "Enrichment",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Quality Sample — Quality Sample",
+          "evidenceReference": "AUTONOMOUS-0009"
+        },
+        {
+          "id": "incident-timeline-010",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0010",
+          "eventDate": "2026-07-31",
+          "eventType": "Remediation",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Management Review — Management Review",
+          "evidenceReference": "AUTONOMOUS-0010"
+        },
+        {
+          "id": "incident-timeline-011",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0011",
+          "eventDate": "2026-08-02",
+          "eventType": "Alert",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Exception Follow-up — Exception Follow-up",
+          "evidenceReference": "AUTONOMOUS-0011"
+        },
+        {
+          "id": "incident-timeline-012",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0012",
+          "eventDate": "2026-08-04",
+          "eventType": "Comment",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Evidence Package — Evidence Package",
+          "evidenceReference": "AUTONOMOUS-0012"
+        },
+        {
+          "id": "incident-timeline-013",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0013",
+          "eventDate": "2026-08-06",
+          "eventType": "Evidence",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Planning Cycle — Planning Cycle",
+          "evidenceReference": "AUTONOMOUS-0013"
+        },
+        {
+          "id": "incident-timeline-014",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0014",
+          "eventDate": "2026-08-08",
+          "eventType": "Enrichment",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Performance Review — Performance Review",
+          "evidenceReference": "AUTONOMOUS-0014"
+        },
+        {
+          "id": "incident-timeline-015",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0015",
+          "eventDate": "2026-08-10",
+          "eventType": "Remediation",
+          "summary": "Privileged login alert normalized from the local SOC fixture. — Final Verification — Final Verification",
+          "evidenceReference": "AUTONOMOUS-0015"
+        }
+      ]
     },
     {
       "id": "threat-enrichment",
       "title": "Threat Indicator Enrichment",
       "description": "Enrich an indicator from local test intelligence, manual research, or a clearly configured provider.",
       "fields": [
-        {"key": "indicator", "label": "Indicator", "type": "text", "required": true},
-        {"key": "indicatorType", "label": "Indicator Type", "type": "select", "required": true, "options": ["IP", "Domain", "Hash", "User", "Host"]},
-        {"key": "provider", "label": "Enrichment Provider", "type": "select", "required": true, "options": ["Local test intelligence", "Manual research", "Configured provider"]},
-        {"key": "analyst", "label": "Analyst", "type": "text", "required": true},
-        {"key": "scope", "label": "Enrichment Scope", "type": "select", "required": true, "options": ["Reputation", "MITRE mapping", "Related indicators", "Full"]}
+        {
+          "key": "indicator",
+          "label": "Indicator",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "indicatorType",
+          "label": "Indicator Type",
+          "type": "select",
+          "required": true,
+          "options": [
+            "IP",
+            "Domain",
+            "Hash",
+            "User",
+            "Host"
+          ]
+        },
+        {
+          "key": "provider",
+          "label": "Enrichment Provider",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Local test intelligence",
+            "Manual research",
+            "Configured provider"
+          ]
+        },
+        {
+          "key": "analyst",
+          "label": "Analyst",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "scope",
+          "label": "Enrichment Scope",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Reputation",
+            "MITRE mapping",
+            "Related indicators",
+            "Full"
+          ]
+        }
       ],
-      "states": ["queued", "enriching", "results-ready", "reviewed", "failed"],
+      "states": [
+        "queued",
+        "enriching",
+        "results-ready",
+        "reviewed",
+        "failed"
+      ],
       "transitions": [
-        {"id": "enrich", "label": "Run Enrichment", "from": ["queued", "failed"], "to": "enriching"},
-        {"id": "results", "label": "Save Results", "from": ["enriching"], "to": "results-ready"},
-        {"id": "review", "label": "Approve Enrichment", "from": ["results-ready"], "to": "reviewed"},
-        {"id": "fail", "label": "Record Provider Failure", "from": ["enriching"], "to": "failed"}
+        {
+          "id": "enrich",
+          "label": "Run Enrichment",
+          "from": [
+            "queued",
+            "failed"
+          ],
+          "to": "enriching"
+        },
+        {
+          "id": "results",
+          "label": "Save Results",
+          "from": [
+            "enriching"
+          ],
+          "to": "results-ready"
+        },
+        {
+          "id": "review",
+          "label": "Approve Enrichment",
+          "from": [
+            "results-ready"
+          ],
+          "to": "reviewed"
+        },
+        {
+          "id": "fail",
+          "label": "Record Provider Failure",
+          "from": [
+            "enriching"
+          ],
+          "to": "failed"
+        }
       ],
-      "seeds": [{"id": "enrichment-1001", "state": "queued", "indicator": "203.0.113.42", "indicatorType": "IP", "provider": "Local test intelligence", "analyst": "Noah Wilson", "scope": "Full"}]
+      "seeds": [
+        {
+          "id": "threat-enrichment-001",
+          "state": "queued",
+          "indicator": "203.0.113.42 — North Region — North Region",
+          "indicatorType": "IP",
+          "provider": "Local test intelligence",
+          "analyst": "Avery Morgan",
+          "scope": "Reputation"
+        },
+        {
+          "id": "threat-enrichment-002",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Enterprise Account — Enterprise Account",
+          "indicatorType": "Domain",
+          "provider": "Manual research",
+          "analyst": "Jordan Lee",
+          "scope": "MITRE mapping"
+        },
+        {
+          "id": "threat-enrichment-003",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Quarterly Cycle — Quarterly Cycle",
+          "indicatorType": "Hash",
+          "provider": "Configured provider",
+          "analyst": "Taylor Brooks",
+          "scope": "Related indicators"
+        },
+        {
+          "id": "threat-enrichment-004",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Priority Queue — Priority Queue",
+          "indicatorType": "User",
+          "provider": "Local test intelligence",
+          "analyst": "Morgan Chen",
+          "scope": "Full"
+        },
+        {
+          "id": "threat-enrichment-005",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Operations Review — Operations Review",
+          "indicatorType": "Host",
+          "provider": "Manual research",
+          "analyst": "Riley Patel",
+          "scope": "Reputation"
+        },
+        {
+          "id": "threat-enrichment-006",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Customer Request — Customer Request",
+          "indicatorType": "IP",
+          "provider": "Configured provider",
+          "analyst": "Casey Nguyen",
+          "scope": "MITRE mapping"
+        },
+        {
+          "id": "threat-enrichment-007",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Compliance Check — Compliance Check",
+          "indicatorType": "Domain",
+          "provider": "Local test intelligence",
+          "analyst": "Cameron Diaz",
+          "scope": "Related indicators"
+        },
+        {
+          "id": "threat-enrichment-008",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Service Window — Service Window",
+          "indicatorType": "Hash",
+          "provider": "Manual research",
+          "analyst": "Drew Wilson",
+          "scope": "Full"
+        },
+        {
+          "id": "threat-enrichment-009",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Quality Sample — Quality Sample",
+          "indicatorType": "User",
+          "provider": "Configured provider",
+          "analyst": "Emerson Clark",
+          "scope": "Reputation"
+        },
+        {
+          "id": "threat-enrichment-010",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Management Review — Management Review",
+          "indicatorType": "Host",
+          "provider": "Local test intelligence",
+          "analyst": "Hayden Kim",
+          "scope": "MITRE mapping"
+        },
+        {
+          "id": "threat-enrichment-011",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Exception Follow-up — Exception Follow-up",
+          "indicatorType": "IP",
+          "provider": "Manual research",
+          "analyst": "Jamie Rivera",
+          "scope": "Related indicators"
+        },
+        {
+          "id": "threat-enrichment-012",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Evidence Package — Evidence Package",
+          "indicatorType": "Domain",
+          "provider": "Configured provider",
+          "analyst": "Kai Thompson",
+          "scope": "Full"
+        },
+        {
+          "id": "threat-enrichment-013",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Planning Cycle — Planning Cycle",
+          "indicatorType": "Hash",
+          "provider": "Local test intelligence",
+          "analyst": "Logan Shah",
+          "scope": "Reputation"
+        },
+        {
+          "id": "threat-enrichment-014",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Performance Review — Performance Review",
+          "indicatorType": "User",
+          "provider": "Manual research",
+          "analyst": "Parker Evans",
+          "scope": "MITRE mapping"
+        },
+        {
+          "id": "threat-enrichment-015",
+          "state": "queued",
+          "indicator": "203.0.113.42 — Final Verification — Final Verification",
+          "indicatorType": "Host",
+          "provider": "Configured provider",
+          "analyst": "Quinn Murphy",
+          "scope": "Related indicators"
+        }
+      ]
     },
     {
       "id": "remediation-playbooks",
       "title": "Remediation Playbook Run",
       "description": "Prepare approved response steps with rollback notes and validation checks before local execution tracking.",
       "fields": [
-        {"key": "playbookName", "label": "Playbook Name", "type": "text", "required": true},
-        {"key": "incidentId", "label": "Incident ID", "type": "text", "required": true},
-        {"key": "approvalOwner", "label": "Approval Owner", "type": "text", "required": true},
-        {"key": "rollbackNotes", "label": "Rollback Notes", "type": "textarea", "required": true},
-        {"key": "validationCheck", "label": "Validation Check", "type": "textarea", "required": true}
+        {
+          "key": "playbookName",
+          "label": "Playbook Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "incidentId",
+          "label": "Incident ID",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "approvalOwner",
+          "label": "Approval Owner",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "rollbackNotes",
+          "label": "Rollback Notes",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "validationCheck",
+          "label": "Validation Check",
+          "type": "textarea",
+          "required": true
+        }
       ],
-      "states": ["draft", "pending-approval", "approved", "running", "validated", "rolled-back"],
+      "states": [
+        "draft",
+        "pending-approval",
+        "approved",
+        "running",
+        "validated",
+        "rolled-back"
+      ],
       "transitions": [
-        {"id": "submit", "label": "Request Approval", "from": ["draft"], "to": "pending-approval"},
-        {"id": "approve", "label": "Approve Playbook", "from": ["pending-approval"], "to": "approved"},
-        {"id": "run", "label": "Start Run", "from": ["approved"], "to": "running"},
-        {"id": "validate", "label": "Validate Outcome", "from": ["running"], "to": "validated"},
-        {"id": "rollback", "label": "Record Rollback", "from": ["running", "validated"], "to": "rolled-back"}
+        {
+          "id": "submit",
+          "label": "Request Approval",
+          "from": [
+            "draft"
+          ],
+          "to": "pending-approval"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Playbook",
+          "from": [
+            "pending-approval"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "run",
+          "label": "Start Run",
+          "from": [
+            "approved"
+          ],
+          "to": "running"
+        },
+        {
+          "id": "validate",
+          "label": "Validate Outcome",
+          "from": [
+            "running"
+          ],
+          "to": "validated"
+        },
+        {
+          "id": "rollback",
+          "label": "Record Rollback",
+          "from": [
+            "running",
+            "validated"
+          ],
+          "to": "rolled-back"
+        }
       ],
-      "seeds": [{"id": "playbook-run-1001", "state": "draft", "playbookName": "Disable suspected privileged session", "incidentId": "INC-2026-041", "approvalOwner": "Security Duty Manager", "rollbackNotes": "Re-enable only after identity verification and credential rotation.", "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy."}]
+      "seeds": [
+        {
+          "id": "remediation-playbooks-001",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — North Region — North Region",
+          "incidentId": "AUTONOMOUS-0001",
+          "approvalOwner": "Avery Morgan",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — North Region — North Region",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — North Region — North Region"
+        },
+        {
+          "id": "remediation-playbooks-002",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Enterprise Account — Enterprise Account",
+          "incidentId": "AUTONOMOUS-0002",
+          "approvalOwner": "Jordan Lee",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Enterprise Account — Enterprise Account",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Enterprise Account — Enterprise Account"
+        },
+        {
+          "id": "remediation-playbooks-003",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Quarterly Cycle — Quarterly Cycle",
+          "incidentId": "AUTONOMOUS-0003",
+          "approvalOwner": "Taylor Brooks",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Quarterly Cycle — Quarterly Cycle",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Quarterly Cycle — Quarterly Cycle"
+        },
+        {
+          "id": "remediation-playbooks-004",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Priority Queue — Priority Queue",
+          "incidentId": "AUTONOMOUS-0004",
+          "approvalOwner": "Morgan Chen",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Priority Queue — Priority Queue",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Priority Queue — Priority Queue"
+        },
+        {
+          "id": "remediation-playbooks-005",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Operations Review — Operations Review",
+          "incidentId": "AUTONOMOUS-0005",
+          "approvalOwner": "Riley Patel",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Operations Review — Operations Review",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Operations Review — Operations Review"
+        },
+        {
+          "id": "remediation-playbooks-006",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Customer Request — Customer Request",
+          "incidentId": "AUTONOMOUS-0006",
+          "approvalOwner": "Casey Nguyen",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Customer Request — Customer Request",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Customer Request — Customer Request"
+        },
+        {
+          "id": "remediation-playbooks-007",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Compliance Check — Compliance Check",
+          "incidentId": "AUTONOMOUS-0007",
+          "approvalOwner": "Cameron Diaz",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Compliance Check — Compliance Check",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Compliance Check — Compliance Check"
+        },
+        {
+          "id": "remediation-playbooks-008",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Service Window — Service Window",
+          "incidentId": "AUTONOMOUS-0008",
+          "approvalOwner": "Drew Wilson",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Service Window — Service Window",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Service Window — Service Window"
+        },
+        {
+          "id": "remediation-playbooks-009",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Quality Sample — Quality Sample",
+          "incidentId": "AUTONOMOUS-0009",
+          "approvalOwner": "Emerson Clark",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Quality Sample — Quality Sample",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Quality Sample — Quality Sample"
+        },
+        {
+          "id": "remediation-playbooks-010",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Management Review — Management Review",
+          "incidentId": "AUTONOMOUS-0010",
+          "approvalOwner": "Hayden Kim",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Management Review — Management Review",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Management Review — Management Review"
+        },
+        {
+          "id": "remediation-playbooks-011",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Exception Follow-up — Exception Follow-up",
+          "incidentId": "AUTONOMOUS-0011",
+          "approvalOwner": "Jamie Rivera",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Exception Follow-up — Exception Follow-up",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Exception Follow-up — Exception Follow-up"
+        },
+        {
+          "id": "remediation-playbooks-012",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Evidence Package — Evidence Package",
+          "incidentId": "AUTONOMOUS-0012",
+          "approvalOwner": "Kai Thompson",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Evidence Package — Evidence Package",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Evidence Package — Evidence Package"
+        },
+        {
+          "id": "remediation-playbooks-013",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Planning Cycle — Planning Cycle",
+          "incidentId": "AUTONOMOUS-0013",
+          "approvalOwner": "Logan Shah",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Planning Cycle — Planning Cycle",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Planning Cycle — Planning Cycle"
+        },
+        {
+          "id": "remediation-playbooks-014",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Performance Review — Performance Review",
+          "incidentId": "AUTONOMOUS-0014",
+          "approvalOwner": "Parker Evans",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Performance Review — Performance Review",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Performance Review — Performance Review"
+        },
+        {
+          "id": "remediation-playbooks-015",
+          "state": "draft",
+          "playbookName": "Disable suspected privileged session — Final Verification — Final Verification",
+          "incidentId": "AUTONOMOUS-0015",
+          "approvalOwner": "Quinn Murphy",
+          "rollbackNotes": "Re-enable only after identity verification and credential rotation. — Final Verification — Final Verification",
+          "validationCheck": "Confirm active sessions are revoked and monitoring remains healthy. — Final Verification — Final Verification"
+        }
+      ]
     },
     {
       "id": "ticket-creation",
       "title": "Incident Ticket Creation and Sync",
       "description": "Create an internal ticket or stage a provider-specific ticket only when that integration is configured.",
       "fields": [
-        {"key": "incidentId", "label": "Incident ID", "type": "text", "required": true},
-        {"key": "provider", "label": "Ticket Provider", "type": "select", "required": true, "options": ["Internal work queue", "Jira", "ServiceNow", "PagerDuty", "Linear"]},
-        {"key": "providerStatus", "label": "Provider Status", "type": "select", "required": true, "options": ["Not required", "Not configured", "Configured"]},
-        {"key": "destination", "label": "Project or Queue", "type": "text", "required": true},
-        {"key": "ticketSummary", "label": "Ticket Summary", "type": "textarea", "required": true}
+        {
+          "key": "incidentId",
+          "label": "Incident ID",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "provider",
+          "label": "Ticket Provider",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Internal work queue",
+            "Jira",
+            "ServiceNow",
+            "PagerDuty",
+            "Linear"
+          ]
+        },
+        {
+          "key": "providerStatus",
+          "label": "Provider Status",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Not required",
+            "Not configured",
+            "Configured"
+          ]
+        },
+        {
+          "key": "destination",
+          "label": "Project or Queue",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "ticketSummary",
+          "label": "Ticket Summary",
+          "type": "textarea",
+          "required": true
+        }
       ],
-      "states": ["draft", "queued", "created", "sync-pending", "synced", "failed"],
+      "states": [
+        "draft",
+        "queued",
+        "created",
+        "sync-pending",
+        "synced",
+        "failed"
+      ],
       "transitions": [
-        {"id": "queue", "label": "Queue Ticket", "from": ["draft", "failed"], "to": "queued"},
-        {"id": "create", "label": "Create Ticket", "from": ["queued"], "to": "created"},
-        {"id": "sync", "label": "Request Sync", "from": ["created"], "to": "sync-pending"},
-        {"id": "synced", "label": "Record Sync", "from": ["sync-pending"], "to": "synced"},
-        {"id": "fail", "label": "Record Failure", "from": ["queued", "sync-pending"], "to": "failed"}
+        {
+          "id": "queue",
+          "label": "Queue Ticket",
+          "from": [
+            "draft",
+            "failed"
+          ],
+          "to": "queued"
+        },
+        {
+          "id": "create",
+          "label": "Create Ticket",
+          "from": [
+            "queued"
+          ],
+          "to": "created"
+        },
+        {
+          "id": "sync",
+          "label": "Request Sync",
+          "from": [
+            "created"
+          ],
+          "to": "sync-pending"
+        },
+        {
+          "id": "synced",
+          "label": "Record Sync",
+          "from": [
+            "sync-pending"
+          ],
+          "to": "synced"
+        },
+        {
+          "id": "fail",
+          "label": "Record Failure",
+          "from": [
+            "queued",
+            "sync-pending"
+          ],
+          "to": "failed"
+        }
       ],
-      "seeds": [{"id": "ticket-job-1001", "state": "draft", "incidentId": "INC-2026-041", "provider": "Internal work queue", "providerStatus": "Not required", "destination": "SOC-L2", "ticketSummary": "Investigate privileged session and complete containment checklist."}]
+      "seeds": [
+        {
+          "id": "ticket-creation-001",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0001",
+          "provider": "Internal work queue",
+          "providerStatus": "Not required",
+          "destination": "SOC-L2 — North Region — North Region",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — North Region — North Region"
+        },
+        {
+          "id": "ticket-creation-002",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0002",
+          "provider": "Jira",
+          "providerStatus": "Not configured",
+          "destination": "SOC-L2 — Enterprise Account — Enterprise Account",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Enterprise Account — Enterprise Account"
+        },
+        {
+          "id": "ticket-creation-003",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0003",
+          "provider": "ServiceNow",
+          "providerStatus": "Configured",
+          "destination": "SOC-L2 — Quarterly Cycle — Quarterly Cycle",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Quarterly Cycle — Quarterly Cycle"
+        },
+        {
+          "id": "ticket-creation-004",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0004",
+          "provider": "PagerDuty",
+          "providerStatus": "Not required",
+          "destination": "SOC-L2 — Priority Queue — Priority Queue",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Priority Queue — Priority Queue"
+        },
+        {
+          "id": "ticket-creation-005",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0005",
+          "provider": "Linear",
+          "providerStatus": "Not configured",
+          "destination": "SOC-L2 — Operations Review — Operations Review",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Operations Review — Operations Review"
+        },
+        {
+          "id": "ticket-creation-006",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0006",
+          "provider": "Internal work queue",
+          "providerStatus": "Configured",
+          "destination": "SOC-L2 — Customer Request — Customer Request",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Customer Request — Customer Request"
+        },
+        {
+          "id": "ticket-creation-007",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0007",
+          "provider": "Jira",
+          "providerStatus": "Not required",
+          "destination": "SOC-L2 — Compliance Check — Compliance Check",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Compliance Check — Compliance Check"
+        },
+        {
+          "id": "ticket-creation-008",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0008",
+          "provider": "ServiceNow",
+          "providerStatus": "Not configured",
+          "destination": "SOC-L2 — Service Window — Service Window",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Service Window — Service Window"
+        },
+        {
+          "id": "ticket-creation-009",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0009",
+          "provider": "PagerDuty",
+          "providerStatus": "Configured",
+          "destination": "SOC-L2 — Quality Sample — Quality Sample",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Quality Sample — Quality Sample"
+        },
+        {
+          "id": "ticket-creation-010",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0010",
+          "provider": "Linear",
+          "providerStatus": "Not required",
+          "destination": "SOC-L2 — Management Review — Management Review",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Management Review — Management Review"
+        },
+        {
+          "id": "ticket-creation-011",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0011",
+          "provider": "Internal work queue",
+          "providerStatus": "Not configured",
+          "destination": "SOC-L2 — Exception Follow-up — Exception Follow-up",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Exception Follow-up — Exception Follow-up"
+        },
+        {
+          "id": "ticket-creation-012",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0012",
+          "provider": "Jira",
+          "providerStatus": "Configured",
+          "destination": "SOC-L2 — Evidence Package — Evidence Package",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Evidence Package — Evidence Package"
+        },
+        {
+          "id": "ticket-creation-013",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0013",
+          "provider": "ServiceNow",
+          "providerStatus": "Not required",
+          "destination": "SOC-L2 — Planning Cycle — Planning Cycle",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Planning Cycle — Planning Cycle"
+        },
+        {
+          "id": "ticket-creation-014",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0014",
+          "provider": "PagerDuty",
+          "providerStatus": "Not configured",
+          "destination": "SOC-L2 — Performance Review — Performance Review",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Performance Review — Performance Review"
+        },
+        {
+          "id": "ticket-creation-015",
+          "state": "draft",
+          "incidentId": "AUTONOMOUS-0015",
+          "provider": "Linear",
+          "providerStatus": "Configured",
+          "destination": "SOC-L2 — Final Verification — Final Verification",
+          "ticketSummary": "Investigate privileged session and complete containment checklist. — Final Verification — Final Verification"
+        }
+      ]
     },
     {
       "id": "compliance-reporting",
       "title": "Security Compliance Evidence Package",
       "description": "Assemble incident evidence into a reviewable SOC 2, ISO, PCI, or HIPAA security package.",
       "fields": [
-        {"key": "framework", "label": "Framework", "type": "select", "required": true, "options": ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA Security"]},
-        {"key": "period", "label": "Reporting Period", "type": "text", "required": true},
-        {"key": "incidentRefs", "label": "Incident References", "type": "textarea", "required": true},
-        {"key": "format", "label": "Package Format", "type": "select", "required": true, "options": ["PDF", "ZIP manifest", "CSV"]},
-        {"key": "reviewer", "label": "Compliance Reviewer", "type": "text", "required": true}
+        {
+          "key": "framework",
+          "label": "Framework",
+          "type": "select",
+          "required": true,
+          "options": [
+            "SOC 2",
+            "ISO 27001",
+            "PCI DSS",
+            "HIPAA Security"
+          ]
+        },
+        {
+          "key": "period",
+          "label": "Reporting Period",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "incidentRefs",
+          "label": "Incident References",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "format",
+          "label": "Package Format",
+          "type": "select",
+          "required": true,
+          "options": [
+            "PDF",
+            "ZIP manifest",
+            "CSV"
+          ]
+        },
+        {
+          "key": "reviewer",
+          "label": "Compliance Reviewer",
+          "type": "text",
+          "required": true
+        }
       ],
-      "states": ["draft", "assembling", "review", "approved", "exported"],
+      "states": [
+        "draft",
+        "assembling",
+        "review",
+        "approved",
+        "exported"
+      ],
       "transitions": [
-        {"id": "assemble", "label": "Assemble Package", "from": ["draft"], "to": "assembling"},
-        {"id": "review", "label": "Submit for Review", "from": ["assembling"], "to": "review"},
-        {"id": "approve", "label": "Approve Package", "from": ["review"], "to": "approved"},
-        {"id": "export", "label": "Export Locally", "from": ["approved"], "to": "exported"}
+        {
+          "id": "assemble",
+          "label": "Assemble Package",
+          "from": [
+            "draft"
+          ],
+          "to": "assembling"
+        },
+        {
+          "id": "review",
+          "label": "Submit for Review",
+          "from": [
+            "assembling"
+          ],
+          "to": "review"
+        },
+        {
+          "id": "approve",
+          "label": "Approve Package",
+          "from": [
+            "review"
+          ],
+          "to": "approved"
+        },
+        {
+          "id": "export",
+          "label": "Export Locally",
+          "from": [
+            "approved"
+          ],
+          "to": "exported"
+        }
       ],
-      "seeds": [{"id": "compliance-report-1001", "state": "draft", "framework": "SOC 2", "period": "2026 Q2", "incidentRefs": "INC-2026-038, INC-2026-041", "format": "PDF", "reviewer": "Quinn Davis"}]
+      "seeds": [
+        {
+          "id": "compliance-reporting-001",
+          "state": "draft",
+          "framework": "SOC 2",
+          "period": "2026 Q2 — North Region — North Region",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — North Region — North Region",
+          "format": "PDF",
+          "reviewer": "Quinn Davis — North Region — North Region"
+        },
+        {
+          "id": "compliance-reporting-002",
+          "state": "draft",
+          "framework": "ISO 27001",
+          "period": "2026 Q2 — Enterprise Account — Enterprise Account",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Enterprise Account — Enterprise Account",
+          "format": "ZIP manifest",
+          "reviewer": "Quinn Davis — Enterprise Account — Enterprise Account"
+        },
+        {
+          "id": "compliance-reporting-003",
+          "state": "draft",
+          "framework": "PCI DSS",
+          "period": "2026 Q2 — Quarterly Cycle — Quarterly Cycle",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Quarterly Cycle — Quarterly Cycle",
+          "format": "CSV",
+          "reviewer": "Quinn Davis — Quarterly Cycle — Quarterly Cycle"
+        },
+        {
+          "id": "compliance-reporting-004",
+          "state": "draft",
+          "framework": "HIPAA Security",
+          "period": "2026 Q2 — Priority Queue — Priority Queue",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Priority Queue — Priority Queue",
+          "format": "PDF",
+          "reviewer": "Quinn Davis — Priority Queue — Priority Queue"
+        },
+        {
+          "id": "compliance-reporting-005",
+          "state": "draft",
+          "framework": "SOC 2",
+          "period": "2026 Q2 — Operations Review — Operations Review",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Operations Review — Operations Review",
+          "format": "ZIP manifest",
+          "reviewer": "Quinn Davis — Operations Review — Operations Review"
+        },
+        {
+          "id": "compliance-reporting-006",
+          "state": "draft",
+          "framework": "ISO 27001",
+          "period": "2026 Q2 — Customer Request — Customer Request",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Customer Request — Customer Request",
+          "format": "CSV",
+          "reviewer": "Quinn Davis — Customer Request — Customer Request"
+        },
+        {
+          "id": "compliance-reporting-007",
+          "state": "draft",
+          "framework": "PCI DSS",
+          "period": "2026 Q2 — Compliance Check — Compliance Check",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Compliance Check — Compliance Check",
+          "format": "PDF",
+          "reviewer": "Quinn Davis — Compliance Check — Compliance Check"
+        },
+        {
+          "id": "compliance-reporting-008",
+          "state": "draft",
+          "framework": "HIPAA Security",
+          "period": "2026 Q2 — Service Window — Service Window",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Service Window — Service Window",
+          "format": "ZIP manifest",
+          "reviewer": "Quinn Davis — Service Window — Service Window"
+        },
+        {
+          "id": "compliance-reporting-009",
+          "state": "draft",
+          "framework": "SOC 2",
+          "period": "2026 Q2 — Quality Sample — Quality Sample",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Quality Sample — Quality Sample",
+          "format": "CSV",
+          "reviewer": "Quinn Davis — Quality Sample — Quality Sample"
+        },
+        {
+          "id": "compliance-reporting-010",
+          "state": "draft",
+          "framework": "ISO 27001",
+          "period": "2026 Q2 — Management Review — Management Review",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Management Review — Management Review",
+          "format": "PDF",
+          "reviewer": "Quinn Davis — Management Review — Management Review"
+        },
+        {
+          "id": "compliance-reporting-011",
+          "state": "draft",
+          "framework": "PCI DSS",
+          "period": "2026 Q2 — Exception Follow-up — Exception Follow-up",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Exception Follow-up — Exception Follow-up",
+          "format": "ZIP manifest",
+          "reviewer": "Quinn Davis — Exception Follow-up — Exception Follow-up"
+        },
+        {
+          "id": "compliance-reporting-012",
+          "state": "draft",
+          "framework": "HIPAA Security",
+          "period": "2026 Q2 — Evidence Package — Evidence Package",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Evidence Package — Evidence Package",
+          "format": "CSV",
+          "reviewer": "Quinn Davis — Evidence Package — Evidence Package"
+        },
+        {
+          "id": "compliance-reporting-013",
+          "state": "draft",
+          "framework": "SOC 2",
+          "period": "2026 Q2 — Planning Cycle — Planning Cycle",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Planning Cycle — Planning Cycle",
+          "format": "PDF",
+          "reviewer": "Quinn Davis — Planning Cycle — Planning Cycle"
+        },
+        {
+          "id": "compliance-reporting-014",
+          "state": "draft",
+          "framework": "ISO 27001",
+          "period": "2026 Q2 — Performance Review — Performance Review",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Performance Review — Performance Review",
+          "format": "ZIP manifest",
+          "reviewer": "Quinn Davis — Performance Review — Performance Review"
+        },
+        {
+          "id": "compliance-reporting-015",
+          "state": "draft",
+          "framework": "PCI DSS",
+          "period": "2026 Q2 — Final Verification — Final Verification",
+          "incidentRefs": "INC-2026-038, INC-2026-041 — Final Verification — Final Verification",
+          "format": "CSV",
+          "reviewer": "Quinn Davis — Final Verification — Final Verification"
+        }
+      ]
     },
     {
       "id": "analyst-performance",
       "title": "SOC Analyst Performance Review",
       "description": "Calculate handling time, false positives, escalations, SLA misses, and closure quality for a defined team period.",
       "fields": [
-        {"key": "team", "label": "SOC Team", "type": "text", "required": true},
-        {"key": "period", "label": "Measurement Period", "type": "text", "required": true},
-        {"key": "slaMinutes", "label": "Response SLA Minutes", "type": "number", "required": true},
-        {"key": "baselineMode", "label": "Baseline", "type": "select", "required": true, "options": ["Prior period", "Team target", "Custom"]},
-        {"key": "reviewOwner", "label": "Review Owner", "type": "text", "required": true}
+        {
+          "key": "team",
+          "label": "SOC Team",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "period",
+          "label": "Measurement Period",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "slaMinutes",
+          "label": "Response SLA Minutes",
+          "type": "number",
+          "required": true
+        },
+        {
+          "key": "baselineMode",
+          "label": "Baseline",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Prior period",
+            "Team target",
+            "Custom"
+          ]
+        },
+        {
+          "key": "reviewOwner",
+          "label": "Review Owner",
+          "type": "text",
+          "required": true
+        }
       ],
-      "states": ["configured", "calculating", "manager-review", "published"],
+      "states": [
+        "configured",
+        "calculating",
+        "manager-review",
+        "published"
+      ],
       "transitions": [
-        {"id": "calculate", "label": "Calculate Metrics", "from": ["configured"], "to": "calculating"},
-        {"id": "review", "label": "Start Manager Review", "from": ["calculating"], "to": "manager-review"},
-        {"id": "recalculate", "label": "Recalculate", "from": ["manager-review"], "to": "calculating"},
-        {"id": "publish", "label": "Publish Dashboard", "from": ["manager-review"], "to": "published"}
+        {
+          "id": "calculate",
+          "label": "Calculate Metrics",
+          "from": [
+            "configured"
+          ],
+          "to": "calculating"
+        },
+        {
+          "id": "review",
+          "label": "Start Manager Review",
+          "from": [
+            "calculating"
+          ],
+          "to": "manager-review"
+        },
+        {
+          "id": "recalculate",
+          "label": "Recalculate",
+          "from": [
+            "manager-review"
+          ],
+          "to": "calculating"
+        },
+        {
+          "id": "publish",
+          "label": "Publish Dashboard",
+          "from": [
+            "manager-review"
+          ],
+          "to": "published"
+        }
       ],
-      "seeds": [{"id": "performance-1001", "state": "configured", "team": "SOC Alpha", "period": "2026-06", "slaMinutes": 30, "baselineMode": "Prior period", "reviewOwner": "SOC Operations Lead"}]
+      "seeds": [
+        {
+          "id": "analyst-performance-001",
+          "state": "configured",
+          "team": "SOC Alpha — North Region — North Region",
+          "period": "2026-06 — North Region — North Region",
+          "slaMinutes": 30.0,
+          "baselineMode": "Prior period",
+          "reviewOwner": "Avery Morgan"
+        },
+        {
+          "id": "analyst-performance-002",
+          "state": "configured",
+          "team": "SOC Alpha — Enterprise Account — Enterprise Account",
+          "period": "2026-06 — Enterprise Account — Enterprise Account",
+          "slaMinutes": 32.0,
+          "baselineMode": "Team target",
+          "reviewOwner": "Jordan Lee"
+        },
+        {
+          "id": "analyst-performance-003",
+          "state": "configured",
+          "team": "SOC Alpha — Quarterly Cycle — Quarterly Cycle",
+          "period": "2026-06 — Quarterly Cycle — Quarterly Cycle",
+          "slaMinutes": 34.0,
+          "baselineMode": "Custom",
+          "reviewOwner": "Taylor Brooks"
+        },
+        {
+          "id": "analyst-performance-004",
+          "state": "configured",
+          "team": "SOC Alpha — Priority Queue — Priority Queue",
+          "period": "2026-06 — Priority Queue — Priority Queue",
+          "slaMinutes": 36.0,
+          "baselineMode": "Prior period",
+          "reviewOwner": "Morgan Chen"
+        },
+        {
+          "id": "analyst-performance-005",
+          "state": "configured",
+          "team": "SOC Alpha — Operations Review — Operations Review",
+          "period": "2026-06 — Operations Review — Operations Review",
+          "slaMinutes": 38.0,
+          "baselineMode": "Team target",
+          "reviewOwner": "Riley Patel"
+        },
+        {
+          "id": "analyst-performance-006",
+          "state": "configured",
+          "team": "SOC Alpha — Customer Request — Customer Request",
+          "period": "2026-06 — Customer Request — Customer Request",
+          "slaMinutes": 40.0,
+          "baselineMode": "Custom",
+          "reviewOwner": "Casey Nguyen"
+        },
+        {
+          "id": "analyst-performance-007",
+          "state": "configured",
+          "team": "SOC Alpha — Compliance Check — Compliance Check",
+          "period": "2026-06 — Compliance Check — Compliance Check",
+          "slaMinutes": 42.0,
+          "baselineMode": "Prior period",
+          "reviewOwner": "Cameron Diaz"
+        },
+        {
+          "id": "analyst-performance-008",
+          "state": "configured",
+          "team": "SOC Alpha — Service Window — Service Window",
+          "period": "2026-06 — Service Window — Service Window",
+          "slaMinutes": 44.0,
+          "baselineMode": "Team target",
+          "reviewOwner": "Drew Wilson"
+        },
+        {
+          "id": "analyst-performance-009",
+          "state": "configured",
+          "team": "SOC Alpha — Quality Sample — Quality Sample",
+          "period": "2026-06 — Quality Sample — Quality Sample",
+          "slaMinutes": 46.0,
+          "baselineMode": "Custom",
+          "reviewOwner": "Emerson Clark"
+        },
+        {
+          "id": "analyst-performance-010",
+          "state": "configured",
+          "team": "SOC Alpha — Management Review — Management Review",
+          "period": "2026-06 — Management Review — Management Review",
+          "slaMinutes": 48.0,
+          "baselineMode": "Prior period",
+          "reviewOwner": "Hayden Kim"
+        },
+        {
+          "id": "analyst-performance-011",
+          "state": "configured",
+          "team": "SOC Alpha — Exception Follow-up — Exception Follow-up",
+          "period": "2026-06 — Exception Follow-up — Exception Follow-up",
+          "slaMinutes": 50.0,
+          "baselineMode": "Team target",
+          "reviewOwner": "Jamie Rivera"
+        },
+        {
+          "id": "analyst-performance-012",
+          "state": "configured",
+          "team": "SOC Alpha — Evidence Package — Evidence Package",
+          "period": "2026-06 — Evidence Package — Evidence Package",
+          "slaMinutes": 52.0,
+          "baselineMode": "Custom",
+          "reviewOwner": "Kai Thompson"
+        },
+        {
+          "id": "analyst-performance-013",
+          "state": "configured",
+          "team": "SOC Alpha — Planning Cycle — Planning Cycle",
+          "period": "2026-06 — Planning Cycle — Planning Cycle",
+          "slaMinutes": 54.0,
+          "baselineMode": "Prior period",
+          "reviewOwner": "Logan Shah"
+        },
+        {
+          "id": "analyst-performance-014",
+          "state": "configured",
+          "team": "SOC Alpha — Performance Review — Performance Review",
+          "period": "2026-06 — Performance Review — Performance Review",
+          "slaMinutes": 56.0,
+          "baselineMode": "Team target",
+          "reviewOwner": "Parker Evans"
+        },
+        {
+          "id": "analyst-performance-015",
+          "state": "configured",
+          "team": "SOC Alpha — Final Verification — Final Verification",
+          "period": "2026-06 — Final Verification — Final Verification",
+          "slaMinutes": 58.0,
+          "baselineMode": "Custom",
+          "reviewOwner": "Quinn Murphy"
+        }
+      ]
     }
   ],
   "resources": [
-    {"name": "alert_sources", "type": "table", "workflowId": "alert-ingestion"},
-    {"name": "alert_ingestion_events", "type": "table", "workflowId": "alert-ingestion"},
-    {"name": "normalized_alerts", "type": "table", "workflowId": "alert-ingestion"},
-    {"name": "ai_triage_runs", "type": "table", "workflowId": "ai-triage"},
-    {"name": "triage_findings", "type": "table", "workflowId": "ai-triage"},
-    {"name": "triage_recommendations", "type": "table", "workflowId": "ai-triage"},
-    {"name": "incident_timeline_events", "type": "table", "workflowId": "incident-timeline"},
-    {"name": "incident_evidence", "type": "table", "workflowId": "incident-timeline"},
-    {"name": "threat_enrichment_results", "type": "table", "workflowId": "threat-enrichment"},
-    {"name": "ioc_reputation", "type": "table", "workflowId": "threat-enrichment"},
-    {"name": "mitre_mappings", "type": "table", "workflowId": "threat-enrichment"},
-    {"name": "remediation_playbooks", "type": "table", "workflowId": "remediation-playbooks"},
-    {"name": "playbook_steps", "type": "table", "workflowId": "remediation-playbooks"},
-    {"name": "playbook_runs", "type": "table", "workflowId": "remediation-playbooks"},
-    {"name": "ticket_integrations", "type": "table", "workflowId": "ticket-creation"},
-    {"name": "ticket_sync_events", "type": "table", "workflowId": "ticket-creation"},
-    {"name": "compliance_reports", "type": "table", "workflowId": "compliance-reporting"},
-    {"name": "security_evidence_items", "type": "table", "workflowId": "compliance-reporting"},
-    {"name": "analyst_performance_metrics", "type": "view", "workflowId": "analyst-performance"},
-    {"name": "soc_sla_metrics", "type": "view", "workflowId": "analyst-performance"}
+    {
+      "name": "alert_sources",
+      "type": "table",
+      "workflowId": "alert-ingestion"
+    },
+    {
+      "name": "alert_ingestion_events",
+      "type": "table",
+      "workflowId": "alert-ingestion"
+    },
+    {
+      "name": "normalized_alerts",
+      "type": "table",
+      "workflowId": "alert-ingestion"
+    },
+    {
+      "name": "ai_triage_runs",
+      "type": "table",
+      "workflowId": "ai-triage"
+    },
+    {
+      "name": "triage_findings",
+      "type": "table",
+      "workflowId": "ai-triage"
+    },
+    {
+      "name": "triage_recommendations",
+      "type": "table",
+      "workflowId": "ai-triage"
+    },
+    {
+      "name": "incident_timeline_events",
+      "type": "table",
+      "workflowId": "incident-timeline"
+    },
+    {
+      "name": "incident_evidence",
+      "type": "table",
+      "workflowId": "incident-timeline"
+    },
+    {
+      "name": "threat_enrichment_results",
+      "type": "table",
+      "workflowId": "threat-enrichment"
+    },
+    {
+      "name": "ioc_reputation",
+      "type": "table",
+      "workflowId": "threat-enrichment"
+    },
+    {
+      "name": "mitre_mappings",
+      "type": "table",
+      "workflowId": "threat-enrichment"
+    },
+    {
+      "name": "remediation_playbooks",
+      "type": "table",
+      "workflowId": "remediation-playbooks"
+    },
+    {
+      "name": "playbook_steps",
+      "type": "table",
+      "workflowId": "remediation-playbooks"
+    },
+    {
+      "name": "playbook_runs",
+      "type": "table",
+      "workflowId": "remediation-playbooks"
+    },
+    {
+      "name": "ticket_integrations",
+      "type": "table",
+      "workflowId": "ticket-creation"
+    },
+    {
+      "name": "ticket_sync_events",
+      "type": "table",
+      "workflowId": "ticket-creation"
+    },
+    {
+      "name": "compliance_reports",
+      "type": "table",
+      "workflowId": "compliance-reporting"
+    },
+    {
+      "name": "security_evidence_items",
+      "type": "table",
+      "workflowId": "compliance-reporting"
+    },
+    {
+      "name": "analyst_performance_metrics",
+      "type": "view",
+      "workflowId": "analyst-performance"
+    },
+    {
+      "name": "soc_sla_metrics",
+      "type": "view",
+      "workflowId": "analyst-performance"
+    }
   ]
 }

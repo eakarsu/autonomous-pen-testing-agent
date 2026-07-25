@@ -14,19 +14,19 @@
     "security_detection"
   ],
   "featureCount": 532,
-  "candidateFeatureCount": 606,
-  "eliminatedSimilarFeatures": 74,
-  "evidenceCount": 1166,
+  "candidateFeatureCount": 604,
+  "eliminatedSimilarFeatures": 72,
+  "evidenceCount": 1164,
   "aiPageCount": 40,
   "sourceAIPageCount": 41,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
   "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
   "database": "database.sqlite",
   "databaseSeed": {
-    "seededProjects": 4,
-    "seededTables": 43,
-    "seededRows": 647
+    "seededProjects": 3,
+    "seededTables": 41,
+    "seededRows": 617
   },
-  "visibleFeatureCount": 107,
+  "visibleFeatureCount": 98,
   "featureVisibilityMode": "seeded-or-ai"
 }
