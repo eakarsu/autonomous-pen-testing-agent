@@ -13,12 +13,12 @@
     "AIOTSecOpsForICS",
     "security_detection"
   ],
-  "featureCount": 532,
-  "candidateFeatureCount": 604,
-  "eliminatedSimilarFeatures": 72,
-  "evidenceCount": 1164,
-  "aiPageCount": 40,
-  "sourceAIPageCount": 41,
+  "featureCount": 594,
+  "candidateFeatureCount": 650,
+  "eliminatedSimilarFeatures": 56,
+  "evidenceCount": 1237,
+  "aiPageCount": 72,
+  "sourceAIPageCount": 73,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
   "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
   "database": "database.sqlite",
@@ -27,6 +27,6 @@
     "seededTables": 41,
     "seededRows": 617
   },
-  "visibleFeatureCount": 98,
+  "visibleFeatureCount": 137,
   "featureVisibilityMode": "seeded-or-ai"
 }
