@@ -3,7 +3,7 @@
 Industry: **Security & Defense**  
 Specialization: **Autonomous Pen Testing Agent**
 
-This standalone application consolidates source-backed capabilities into 594 optimized features, including 137 visible data-backed or AI-enabled views. Its public demo SQLite database contains 617 sanitized source rows across 41 imported tables and 120 operational workflow records.
+This standalone application consolidates source-backed capabilities into 594 optimized features, including all 594 source-backed feature views. Its public demo SQLite database contains 617 sanitized source rows across 41 imported tables and 120 operational workflow records.
 
 ## Run locally
 
